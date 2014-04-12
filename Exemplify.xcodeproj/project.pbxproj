@@ -22,6 +22,7 @@
 		A5DB551518F8F380003B9FF7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A5DB551318F8F380003B9FF7 /* InfoPlist.strings */; };
 		A5DB551718F8F380003B9FF7 /* ExemplifyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DB551618F8F380003B9FF7 /* ExemplifyTests.m */; };
 		A5DB552218F8FC8C003B9FF7 /* EXSearchSuggestions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DB552118F8FC8C003B9FF7 /* EXSearchSuggestions.m */; };
+		A5DB552518F8FDC1003B9FF7 /* EXArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DB552418F8FDC1003B9FF7 /* EXArticle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		A5DB551618F8F380003B9FF7 /* ExemplifyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExemplifyTests.m; sourceTree = "<group>"; };
 		A5DB552018F8FC8C003B9FF7 /* EXSearchSuggestions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXSearchSuggestions.h; sourceTree = "<group>"; };
 		A5DB552118F8FC8C003B9FF7 /* EXSearchSuggestions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXSearchSuggestions.m; sourceTree = "<group>"; };
+		A5DB552318F8FDC1003B9FF7 /* EXArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXArticle.h; path = Model/EXArticle.h; sourceTree = "<group>"; };
+		A5DB552418F8FDC1003B9FF7 /* EXArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EXArticle.m; path = Model/EXArticle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,7 @@
 				A5DB54FB18F8F380003B9FF7 /* EXAppDelegate.m */,
 				A5DB54FD18F8F380003B9FF7 /* Main.storyboard */,
 				A5DB552018F8FC8C003B9FF7 /* EXSearchSuggestions.h */,
+				A5DB552618F8FDC7003B9FF7 /* Model */,
 				A5DB552118F8FC8C003B9FF7 /* EXSearchSuggestions.m */,
 				A5DB550018F8F380003B9FF7 /* EXViewController.h */,
 				A5DB550118F8F380003B9FF7 /* EXViewController.m */,
@@ -155,6 +159,15 @@
 				A5DB551318F8F380003B9FF7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A5DB552618F8FDC7003B9FF7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A5DB552318F8FDC1003B9FF7 /* EXArticle.h */,
+				A5DB552418F8FDC1003B9FF7 /* EXArticle.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5DB552518F8FDC1003B9FF7 /* EXArticle.m in Sources */,
 				A5DB550218F8F380003B9FF7 /* EXViewController.m in Sources */,
 				A5DB54F818F8F380003B9FF7 /* main.m in Sources */,
 				A5DB552218F8FC8C003B9FF7 /* EXSearchSuggestions.m in Sources */,
