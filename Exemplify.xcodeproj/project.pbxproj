@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8C11FAAC18F907E500E405CB /* EXArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C11FAAB18F907E500E405CB /* EXArticle.m */; };
+		8C11FAAF18F90BB400E405CB /* EXArticleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C11FAAE18F90BB400E405CB /* EXArticleVC.m */; };
 		A5DB54EC18F8F380003B9FF7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DB54EB18F8F380003B9FF7 /* Foundation.framework */; };
 		A5DB54EE18F8F380003B9FF7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DB54ED18F8F380003B9FF7 /* CoreGraphics.framework */; };
 		A5DB54F018F8F380003B9FF7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DB54EF18F8F380003B9FF7 /* UIKit.framework */; };
@@ -39,6 +40,8 @@
 /* Begin PBXFileReference section */
 		8C11FAAA18F907E500E405CB /* EXArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXArticle.h; sourceTree = "<group>"; };
 		8C11FAAB18F907E500E405CB /* EXArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXArticle.m; sourceTree = "<group>"; };
+		8C11FAAD18F90BB400E405CB /* EXArticleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXArticleVC.h; sourceTree = "<group>"; };
+		8C11FAAE18F90BB400E405CB /* EXArticleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXArticleVC.m; sourceTree = "<group>"; };
 		A5DB54E818F8F380003B9FF7 /* Exemplify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exemplify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5DB54EB18F8F380003B9FF7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A5DB54ED18F8F380003B9FF7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -124,6 +127,8 @@
 				A5DB54FA18F8F380003B9FF7 /* EXAppDelegate.h */,
 				A5DB54FB18F8F380003B9FF7 /* EXAppDelegate.m */,
 				A5DB54FD18F8F380003B9FF7 /* Main.storyboard */,
+				8C11FAAD18F90BB400E405CB /* EXArticleVC.h */,
+				8C11FAAE18F90BB400E405CB /* EXArticleVC.m */,
 				A5DB552018F8FC8C003B9FF7 /* EXArticleSuggestions.h */,
 				A5DB552118F8FC8C003B9FF7 /* EXArticleSuggestions.m */,
 				A5DB552618F8FDC7003B9FF7 /* Model */,
@@ -278,6 +283,7 @@
 				A5DB54F818F8F380003B9FF7 /* main.m in Sources */,
 				8C11FAAC18F907E500E405CB /* EXArticle.m in Sources */,
 				A5DB552218F8FC8C003B9FF7 /* EXArticleSuggestions.m in Sources */,
+				8C11FAAF18F90BB400E405CB /* EXArticleVC.m in Sources */,
 				A5DB54FC18F8F380003B9FF7 /* EXAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

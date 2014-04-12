@@ -76,15 +76,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Article" textLabel="NAf-av-gpn" style="IBUITableViewCellStyleDefault" id="eRz-d1-4Km">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Article" textLabel="NAf-av-gpn" style="IBUITableViewCellStyleDefault" id="eRz-d1-4Km">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eRz-d1-4Km" id="SlC-6m-5RO">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NAf-av-gpn">
-                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                            <rect key="frame" x="15" y="0.0" width="270" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -100,11 +100,35 @@
                             <outlet property="delegate" destination="sHS-FS-Ybx" id="XHm-fA-zFi"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Article Select" id="qy4-KK-qg3"/>
+                    <navigationItem key="navigationItem" title="Article Select" id="qy4-KK-qg3">
+                        <barButtonItem key="backBarButtonItem" title="Articles" id="OIN-9o-qKs"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="clw-fW-5kl" kind="push" identifier="DisplayArticle" id="xv0-Ab-nVF"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1mf-jb-Wdw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="456" y="-4"/>
+        </scene>
+        <!--ArticleVC - Article Title-->
+        <scene sceneID="ST4-hA-RzQ">
+            <objects>
+                <viewController id="clw-fW-5kl" customClass="EXArticleVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="R6N-Tp-jOY"/>
+                        <viewControllerLayoutGuide type="bottom" id="QM7-WQ-73v"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ayO-HW-BIz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Article Title" id="Nyo-vq-Wpa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c0j-YL-p22" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="885" y="-4"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

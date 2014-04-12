@@ -24,12 +24,12 @@ NSString *searchText = @"";
 
 -(void) viewDidAppear:(BOOL)animated
 {
-	[_searchField becomeFirstResponder];
+	[self.searchField becomeFirstResponder];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    [_searchField resignFirstResponder];
+    [self.searchField resignFirstResponder];
     
     double delayInSeconds = .25;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
