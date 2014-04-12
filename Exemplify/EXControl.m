@@ -63,8 +63,6 @@
 		
 //		NSLog(@"\n%@", url);
 //		NSLog(@"\n%@", title);
-		
-		// PUSHING 4:14 PM
 	}
 	
 	return sources;
