@@ -1,18 +1,18 @@
 //
-//  EXSearchSuggestions.m
+//  EXArticleSuggestions.m
 //  Exemplify
 //
 //  Created by Vassil Mladenov on 4/11/14.
 //  Copyright (c) 2014 Confluence. All rights reserved.
 //
 
-#import "EXSearchSuggestions.h"
+#import "EXArticleSuggestions.h"
 
-@interface EXSearchSuggestions ()
+@interface EXArticleSuggestions ()
 
 @end
 
-@implementation EXSearchSuggestions
+@implementation EXArticleSuggestions
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -44,16 +44,8 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return 1;
 }
 
 /*

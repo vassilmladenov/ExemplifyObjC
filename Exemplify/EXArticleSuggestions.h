@@ -1,5 +1,5 @@
 //
-//  EXSearchSuggestions.h
+//  EXArticleSuggestions.h
 //  Exemplify
 //
 //  Created by Vassil Mladenov on 4/11/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EXSearchSuggestions : UITableViewController
+@interface EXArticleSuggestions : UITableViewController
 
 @end
