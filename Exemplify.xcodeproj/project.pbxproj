@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		8C11FAAC18F907E500E405CB /* EXArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C11FAAB18F907E500E405CB /* EXArticle.m */; };
 		8C11FAAF18F90BB400E405CB /* EXArticleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C11FAAE18F90BB400E405CB /* EXArticleVC.m */; };
+		8C97F59B18F999B10029BE9D /* Cell2.txt in Sources */ = {isa = PBXBuildFile; fileRef = 8C97F58E18F999B10029BE9D /* Cell2.txt */; };
+		8C97F59C18F999B10029BE9D /* CurrentNotesViewController2.txt in Sources */ = {isa = PBXBuildFile; fileRef = 8C97F59018F999B10029BE9D /* CurrentNotesViewController2.txt */; };
+		8C97F59D18F999B10029BE9D /* FlipsideViewController2.txt in Sources */ = {isa = PBXBuildFile; fileRef = 8C97F59218F999B10029BE9D /* FlipsideViewController2.txt */; };
+		8C97F59E18F999B10029BE9D /* main.txt in Sources */ = {isa = PBXBuildFile; fileRef = 8C97F59318F999B10029BE9D /* main.txt */; };
+		8C97F59F18F999B10029BE9D /* MainViewController2.txt in Sources */ = {isa = PBXBuildFile; fileRef = 8C97F59518F999B10029BE9D /* MainViewController2.txt */; };
+		8C97F5A018F999B10029BE9D /* NotesViewController2.txt in Sources */ = {isa = PBXBuildFile; fileRef = 8C97F59718F999B10029BE9D /* NotesViewController2.txt */; };
 		A5DB54EC18F8F380003B9FF7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DB54EB18F8F380003B9FF7 /* Foundation.framework */; };
 		A5DB54EE18F8F380003B9FF7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DB54ED18F8F380003B9FF7 /* CoreGraphics.framework */; };
 		A5DB54F018F8F380003B9FF7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DB54EF18F8F380003B9FF7 /* UIKit.framework */; };
@@ -42,6 +48,17 @@
 		8C11FAAB18F907E500E405CB /* EXArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXArticle.m; sourceTree = "<group>"; };
 		8C11FAAD18F90BB400E405CB /* EXArticleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXArticleVC.h; sourceTree = "<group>"; };
 		8C11FAAE18F90BB400E405CB /* EXArticleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXArticleVC.m; sourceTree = "<group>"; };
+		8C97F58D18F999B10029BE9D /* Cell.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cell.txt; sourceTree = "<group>"; };
+		8C97F58E18F999B10029BE9D /* Cell2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cell2.txt; sourceTree = "<group>"; };
+		8C97F58F18F999B10029BE9D /* CurrentNotesViewController.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CurrentNotesViewController.txt; sourceTree = "<group>"; };
+		8C97F59018F999B10029BE9D /* CurrentNotesViewController2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CurrentNotesViewController2.txt; sourceTree = "<group>"; };
+		8C97F59118F999B10029BE9D /* FlipsideViewController.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FlipsideViewController.txt; sourceTree = "<group>"; };
+		8C97F59218F999B10029BE9D /* FlipsideViewController2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FlipsideViewController2.txt; sourceTree = "<group>"; };
+		8C97F59318F999B10029BE9D /* main.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.txt; sourceTree = "<group>"; };
+		8C97F59418F999B10029BE9D /* MainViewController.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MainViewController.txt; sourceTree = "<group>"; };
+		8C97F59518F999B10029BE9D /* MainViewController2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MainViewController2.txt; sourceTree = "<group>"; };
+		8C97F59618F999B10029BE9D /* NotesViewController.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NotesViewController.txt; sourceTree = "<group>"; };
+		8C97F59718F999B10029BE9D /* NotesViewController2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NotesViewController2.txt; sourceTree = "<group>"; };
 		A5DB54E818F8F380003B9FF7 /* Exemplify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exemplify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5DB54EB18F8F380003B9FF7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A5DB54ED18F8F380003B9FF7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -91,6 +108,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C97F58A18F999B10029BE9D /* recode */ = {
+			isa = PBXGroup;
+			children = (
+				8C97F58D18F999B10029BE9D /* Cell.txt */,
+				8C97F58E18F999B10029BE9D /* Cell2.txt */,
+				8C97F58F18F999B10029BE9D /* CurrentNotesViewController.txt */,
+				8C97F59018F999B10029BE9D /* CurrentNotesViewController2.txt */,
+				8C97F59118F999B10029BE9D /* FlipsideViewController.txt */,
+				8C97F59218F999B10029BE9D /* FlipsideViewController2.txt */,
+				8C97F59318F999B10029BE9D /* main.txt */,
+				8C97F59418F999B10029BE9D /* MainViewController.txt */,
+				8C97F59518F999B10029BE9D /* MainViewController2.txt */,
+				8C97F59618F999B10029BE9D /* NotesViewController.txt */,
+				8C97F59718F999B10029BE9D /* NotesViewController2.txt */,
+			);
+			path = recode;
+			sourceTree = "<group>";
+		};
 		A5DB54DF18F8F380003B9FF7 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +178,7 @@
 		A5DB54F218F8F380003B9FF7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8C97F58A18F999B10029BE9D /* recode */,
 				A5DB54F318F8F380003B9FF7 /* Exemplify-Info.plist */,
 				A5DB54F418F8F380003B9FF7 /* InfoPlist.strings */,
 				A5DB54F718F8F380003B9FF7 /* main.m */,
@@ -280,11 +316,17 @@
 			files = (
 				A5DB550218F8F380003B9FF7 /* EXViewController.m in Sources */,
 				A5DB553018F90582003B9FF7 /* EXControl.m in Sources */,
+				8C97F59C18F999B10029BE9D /* CurrentNotesViewController2.txt in Sources */,
 				A5DB54F818F8F380003B9FF7 /* main.m in Sources */,
+				8C97F5A018F999B10029BE9D /* NotesViewController2.txt in Sources */,
+				8C97F59F18F999B10029BE9D /* MainViewController2.txt in Sources */,
+				8C97F59D18F999B10029BE9D /* FlipsideViewController2.txt in Sources */,
 				8C11FAAC18F907E500E405CB /* EXArticle.m in Sources */,
 				A5DB552218F8FC8C003B9FF7 /* EXArticleSuggestions.m in Sources */,
 				8C11FAAF18F90BB400E405CB /* EXArticleVC.m in Sources */,
 				A5DB54FC18F8F380003B9FF7 /* EXAppDelegate.m in Sources */,
+				8C97F59E18F999B10029BE9D /* main.txt in Sources */,
+				8C97F59B18F999B10029BE9D /* Cell2.txt in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
