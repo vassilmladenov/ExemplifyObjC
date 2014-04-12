@@ -26,7 +26,7 @@
 	NSError *error = Nil;
 	NSString *a = [NSString stringWithContentsOfURL:wikiURL encoding:NSUTF8StringEncoding error:&error];
 	// for every URL in the list
-	
+	NSLog(@"%@",a);
 	// add to array
 
 	return sources;
