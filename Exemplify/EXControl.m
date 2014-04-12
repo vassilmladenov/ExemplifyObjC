@@ -53,10 +53,6 @@
 		[URLs addObject:url];
 		[titles addObject:title];
 		
-//		NSLog(@"\n%@", url);
-//		NSLog(@"\n%@", title);
-		
-		// TODO construct dictionary
 	}
 	
 	[self makeArticlesWithTitles:titles withURLs:URLs];
@@ -65,7 +61,7 @@
 - (void)makeArticlesWithTitles:(NSMutableArray *)titles withURLs:(NSMutableArray *)URLs
 {
 	// for every element, create an article with paired title and url
-    for (int i = 0; i<[titles count]; i++){
+    for (int i = 0; i < [titles count]; i++){
         
         // create an EXArticle
 		EXArticle *a = [[EXArticle alloc] init];
@@ -77,8 +73,6 @@
 		[self.articles addObject:a];
         
     }
-
-	
 
 }
 
