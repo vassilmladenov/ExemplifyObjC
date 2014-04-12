@@ -23,17 +23,10 @@
 	
 	NSURL *wikiURL = [[NSURL alloc] initWithScheme:@"http" host:@"en.wikipedia.org" path:[@"/wiki/" stringByAppendingString:query]];
 	
-//	NSError *getSourceError = Nil;
-//	NSString *htmlSource = [NSString stringWithContentsOfURL:wikiURL encoding:NSUTF8StringEncoding error:&getSourceError];
-//	
-//	if (getSourceError) {
-//		NSLog(@"Error getting source: %@", getSourceError);
-//		return Nil;
-//	}
-	
 	NSError *parserError = Nil;
 	HTMLParser *parser = [[HTMLParser alloc] initWithContentsOfURL:wikiURL error:&parserError];
 	
+	// necessary error check
 	if (parserError) {
 		NSLog(@"Error getting source: %@", parserError);
 		return Nil;
@@ -63,6 +56,8 @@
 		
 //		NSLog(@"\n%@", url);
 //		NSLog(@"\n%@", title);
+		
+		// TODO construct dictionary
 	}
 	
 	return sources;
