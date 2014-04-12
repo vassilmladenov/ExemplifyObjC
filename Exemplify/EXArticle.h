@@ -21,7 +21,7 @@
  * Gets article title, article body
  * @param {NSURL *} url URL of article
  */
-- (void)fetchArticle:(NSURL *)url;
+- (void)fetchArticle:(NSURL *)url withTitle:(NSString *)title;
 
 /**
  * Gets MLA format citation for the article
