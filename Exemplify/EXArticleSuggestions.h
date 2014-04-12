@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EXControl.h"
+#import "EXArticle.h" // test
 
 @interface EXArticleSuggestions : UITableViewController
 
