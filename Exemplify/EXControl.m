@@ -10,18 +10,31 @@
 
 @interface EXControl();
 
+// stores the list of articles, contents of type EXArticle
 @property NSMutableArray *articles;
 
 @end
 
 @implementation EXControl
 
-- (NSString *)readArticle:(NSString *)name
+- (NSMutableArray *)pullSources:(NSString *)query;
 {
-	NSString *retVal = @"";
-	NSMutableURLRequest *grabSource = [[NSMutableURLRequest alloc] init];
+	NSMutableArray *sources = [[NSMutableArray alloc] init];
 	
-	return retVal;
+	// get block of URLs
+
+	// for every URL in the list
+
+	return sources;
+}
+
+- (void)makeArticles:(NSMutableArray *)sources
+{
+	// for every URL in sources
+
+	// create an EXArticle and add it to articles
+	
+	// fetch the article's data	
 }
 
 @end

@@ -14,7 +14,20 @@
 @property (strong, nonatomic) NSString *articleBody;
 @property (strong, nonatomic) NSURL *articleURL;
 
-@property (nonatomic) BOOL citing; // will/won't use article
-@property (strong, nonatomic) NSString *citation;
+@property (nonatomic) BOOL citing;
+
+/**
+ * Builds out EXArticle object:
+ * Gets article title, article body
+ * @param {NSURL *} url [description]
+ */
+- (void)fetchArticle:(NSURL *)url;
+
+/**
+ * Gets MLA format citation for the article
+ * Builds out citation instance variable
+ * @return {NSString *} citation
+ */
+- (NSString *)citeArticle;
 
 @end
