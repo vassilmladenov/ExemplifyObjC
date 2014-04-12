@@ -10,8 +10,9 @@
 
 @interface EXViewController : UIViewController
 
-// begin
 
-// end
+@property (weak, nonatomic) IBOutlet UITextField *searchField;
+
+
 
 @end
