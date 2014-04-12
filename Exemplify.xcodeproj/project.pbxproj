@@ -15,6 +15,9 @@
 		8C97F59E18F999B10029BE9D /* main.txt in Sources */ = {isa = PBXBuildFile; fileRef = 8C97F59318F999B10029BE9D /* main.txt */; };
 		8C97F59F18F999B10029BE9D /* MainViewController2.txt in Sources */ = {isa = PBXBuildFile; fileRef = 8C97F59518F999B10029BE9D /* MainViewController2.txt */; };
 		8C97F5A018F999B10029BE9D /* NotesViewController2.txt in Sources */ = {isa = PBXBuildFile; fileRef = 8C97F59718F999B10029BE9D /* NotesViewController2.txt */; };
+		A58AB5A018F9A3AF00CF995D /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = A58AB59B18F9A3AF00CF995D /* TFHpple.m */; };
+		A58AB5A118F9A3AF00CF995D /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = A58AB59D18F9A3AF00CF995D /* TFHppleElement.m */; };
+		A58AB5A218F9A3AF00CF995D /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = A58AB59F18F9A3AF00CF995D /* XPathQuery.m */; };
 		A5DB54EC18F8F380003B9FF7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DB54EB18F8F380003B9FF7 /* Foundation.framework */; };
 		A5DB54EE18F8F380003B9FF7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DB54ED18F8F380003B9FF7 /* CoreGraphics.framework */; };
 		A5DB54F018F8F380003B9FF7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DB54EF18F8F380003B9FF7 /* UIKit.framework */; };
@@ -59,6 +62,12 @@
 		8C97F59518F999B10029BE9D /* MainViewController2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MainViewController2.txt; sourceTree = "<group>"; };
 		8C97F59618F999B10029BE9D /* NotesViewController.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NotesViewController.txt; sourceTree = "<group>"; };
 		8C97F59718F999B10029BE9D /* NotesViewController2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NotesViewController2.txt; sourceTree = "<group>"; };
+		A58AB59A18F9A3AF00CF995D /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
+		A58AB59B18F9A3AF00CF995D /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
+		A58AB59C18F9A3AF00CF995D /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
+		A58AB59D18F9A3AF00CF995D /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
+		A58AB59E18F9A3AF00CF995D /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
+		A58AB59F18F9A3AF00CF995D /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
 		A5DB54E818F8F380003B9FF7 /* Exemplify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exemplify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5DB54EB18F8F380003B9FF7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A5DB54ED18F8F380003B9FF7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -126,6 +135,19 @@
 			path = recode;
 			sourceTree = "<group>";
 		};
+		A58AB5A318F9A3F600CF995D /* Hpple */ = {
+			isa = PBXGroup;
+			children = (
+				A58AB59A18F9A3AF00CF995D /* TFHpple.h */,
+				A58AB59B18F9A3AF00CF995D /* TFHpple.m */,
+				A58AB59C18F9A3AF00CF995D /* TFHppleElement.h */,
+				A58AB59D18F9A3AF00CF995D /* TFHppleElement.m */,
+				A58AB59E18F9A3AF00CF995D /* XPathQuery.h */,
+				A58AB59F18F9A3AF00CF995D /* XPathQuery.m */,
+			);
+			name = Hpple;
+			sourceTree = "<group>";
+		};
 		A5DB54DF18F8F380003B9FF7 = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +200,7 @@
 		A5DB54F218F8F380003B9FF7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A58AB5A318F9A3F600CF995D /* Hpple */,
 				8C97F58A18F999B10029BE9D /* recode */,
 				A5DB54F318F8F380003B9FF7 /* Exemplify-Info.plist */,
 				A5DB54F418F8F380003B9FF7 /* InfoPlist.strings */,
@@ -316,12 +339,15 @@
 			files = (
 				A5DB550218F8F380003B9FF7 /* EXViewController.m in Sources */,
 				A5DB553018F90582003B9FF7 /* EXControl.m in Sources */,
+				A58AB5A218F9A3AF00CF995D /* XPathQuery.m in Sources */,
 				8C97F59C18F999B10029BE9D /* CurrentNotesViewController2.txt in Sources */,
+				A58AB5A018F9A3AF00CF995D /* TFHpple.m in Sources */,
 				A5DB54F818F8F380003B9FF7 /* main.m in Sources */,
 				8C97F5A018F999B10029BE9D /* NotesViewController2.txt in Sources */,
 				8C97F59F18F999B10029BE9D /* MainViewController2.txt in Sources */,
 				8C97F59D18F999B10029BE9D /* FlipsideViewController2.txt in Sources */,
 				8C11FAAC18F907E500E405CB /* EXArticle.m in Sources */,
+				A58AB5A118F9A3AF00CF995D /* TFHppleElement.m in Sources */,
 				A5DB552218F8FC8C003B9FF7 /* EXArticleSuggestions.m in Sources */,
 				8C11FAAF18F90BB400E405CB /* EXArticleVC.m in Sources */,
 				A5DB54FC18F8F380003B9FF7 /* EXAppDelegate.m in Sources */,

@@ -25,8 +25,17 @@
 	// get block of URLs
 	NSError *error = Nil;
 	NSString *a = [NSString stringWithContentsOfURL:wikiURL encoding:NSUTF8StringEncoding error:&error];
+	
+	NSString *startString = @"<h2><span class=\"mw-headline\" id=\"References\">References</span></h2>";
+	NSString *endString = @"<h2><span class=\"mw-headline\" id=\"External_links\">External links</span></h2>";
+	
+	NSRange r1 = [a rangeOfString:startString];
+	NSRange r2 = [a rangeOfString:endString];
+	NSRange rSub = NSMakeRange(r1.location + r1.length, r2.location - r1.location - r1.length);
+	NSString *b = [a substringWithRange:rSub];
+
 	// for every URL in the list
-	NSLog(@"%@",a);
+	NSLog(@"%@",b);
 	// add to array
 
 	return sources;
