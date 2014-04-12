@@ -13,12 +13,30 @@
 @end
 
 @implementation EXViewController
+NSString *searchText = @"";
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
+
+-(void) viewDidAppear:(BOOL)animated
+{
+	[_searchField becomeFirstResponder];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self performSegueWithIdentifier:@"DisplaySearchSuggestions" sender:self];
+	return YES;
+}
+
+
+
+
+
 
 - (void)didReceiveMemoryWarning
 {

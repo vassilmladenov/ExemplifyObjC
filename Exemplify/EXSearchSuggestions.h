@@ -1,5 +1,5 @@
 //
-//  EXViewController.h
+//  EXSearchSuggestions.h
 //  Exemplify
 //
 //  Created by Vassil Mladenov on 4/11/14.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EXViewController : UIViewController
-
-@property (weak, nonatomic) IBOutlet UITextField *searchField;
-
-
+@interface EXSearchSuggestions : UITableViewController
 
 @end

@@ -21,6 +21,7 @@
 		A5DB550D18F8F380003B9FF7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DB54EF18F8F380003B9FF7 /* UIKit.framework */; };
 		A5DB551518F8F380003B9FF7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A5DB551318F8F380003B9FF7 /* InfoPlist.strings */; };
 		A5DB551718F8F380003B9FF7 /* ExemplifyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DB551618F8F380003B9FF7 /* ExemplifyTests.m */; };
+		A5DB552218F8FC8C003B9FF7 /* EXSearchSuggestions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DB552118F8FC8C003B9FF7 /* EXSearchSuggestions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		A5DB551218F8F380003B9FF7 /* ExemplifyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ExemplifyTests-Info.plist"; sourceTree = "<group>"; };
 		A5DB551418F8F380003B9FF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A5DB551618F8F380003B9FF7 /* ExemplifyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExemplifyTests.m; sourceTree = "<group>"; };
+		A5DB552018F8FC8C003B9FF7 /* EXSearchSuggestions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXSearchSuggestions.h; sourceTree = "<group>"; };
+		A5DB552118F8FC8C003B9FF7 /* EXSearchSuggestions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXSearchSuggestions.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				A5DB54FA18F8F380003B9FF7 /* EXAppDelegate.h */,
 				A5DB54FB18F8F380003B9FF7 /* EXAppDelegate.m */,
 				A5DB54FD18F8F380003B9FF7 /* Main.storyboard */,
+				A5DB552018F8FC8C003B9FF7 /* EXSearchSuggestions.h */,
+				A5DB552118F8FC8C003B9FF7 /* EXSearchSuggestions.m */,
 				A5DB550018F8F380003B9FF7 /* EXViewController.h */,
 				A5DB550118F8F380003B9FF7 /* EXViewController.m */,
 				A5DB550318F8F380003B9FF7 /* Images.xcassets */,
@@ -252,6 +257,7 @@
 			files = (
 				A5DB550218F8F380003B9FF7 /* EXViewController.m in Sources */,
 				A5DB54F818F8F380003B9FF7 /* main.m in Sources */,
+				A5DB552218F8FC8C003B9FF7 /* EXSearchSuggestions.m in Sources */,
 				A5DB54FC18F8F380003B9FF7 /* EXAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
