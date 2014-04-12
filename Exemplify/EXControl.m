@@ -8,8 +8,20 @@
 
 #import "EXControl.h"
 
+@interface EXControl();
+
+@property NSMutableArray *articles;
+
+@end
+
 @implementation EXControl
 
-// added .m
+- (NSString *)readArticle:(NSString *)name
+{
+	NSString *retVal = @"";
+	NSMutableURLRequest *grabSource = [[NSMutableURLRequest alloc] init];
+	
+	return retVal;
+}
 
 @end

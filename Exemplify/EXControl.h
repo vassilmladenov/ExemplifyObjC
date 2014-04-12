@@ -10,6 +10,6 @@
 
 @interface EXControl : NSObject
 
-// added headers
+- (NSString *)readArticle:(NSString *)name;
 
 @end
