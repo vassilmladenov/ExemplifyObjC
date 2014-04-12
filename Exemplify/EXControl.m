@@ -22,6 +22,7 @@
 	NSMutableArray *sources = [[NSMutableArray alloc] init];
 	
 	NSURL *wikiURL = [[NSURL alloc] initWithScheme:@"http" host:@"en.wikipedia.org" path:[@"/wiki/" stringByAppendingString:query]];
+	NSURLRequest *wikiReq = [NSURLRequest requestWithURL:wikiURL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
 	// get block of URLs
 
 	// for every URL in the list
