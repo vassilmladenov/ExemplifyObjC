@@ -18,6 +18,7 @@
 		A58AB5A018F9A3AF00CF995D /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = A58AB59B18F9A3AF00CF995D /* TFHpple.m */; };
 		A58AB5A118F9A3AF00CF995D /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = A58AB59D18F9A3AF00CF995D /* TFHppleElement.m */; };
 		A58AB5A218F9A3AF00CF995D /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = A58AB59F18F9A3AF00CF995D /* XPathQuery.m */; };
+		A58AB5A518F9A52F00CF995D /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A58AB5A418F9A52F00CF995D /* libxml2.dylib */; };
 		A5DB54EC18F8F380003B9FF7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DB54EB18F8F380003B9FF7 /* Foundation.framework */; };
 		A5DB54EE18F8F380003B9FF7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DB54ED18F8F380003B9FF7 /* CoreGraphics.framework */; };
 		A5DB54F018F8F380003B9FF7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DB54EF18F8F380003B9FF7 /* UIKit.framework */; };
@@ -68,6 +69,7 @@
 		A58AB59D18F9A3AF00CF995D /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
 		A58AB59E18F9A3AF00CF995D /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		A58AB59F18F9A3AF00CF995D /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
+		A58AB5A418F9A52F00CF995D /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		A5DB54E818F8F380003B9FF7 /* Exemplify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exemplify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5DB54EB18F8F380003B9FF7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A5DB54ED18F8F380003B9FF7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -98,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A58AB5A518F9A52F00CF995D /* libxml2.dylib in Frameworks */,
 				A5DB54EE18F8F380003B9FF7 /* CoreGraphics.framework in Frameworks */,
 				A5DB54F018F8F380003B9FF7 /* UIKit.framework in Frameworks */,
 				A5DB54EC18F8F380003B9FF7 /* Foundation.framework in Frameworks */,
@@ -170,6 +173,7 @@
 		A5DB54EA18F8F380003B9FF7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A58AB5A418F9A52F00CF995D /* libxml2.dylib */,
 				A5DB54EB18F8F380003B9FF7 /* Foundation.framework */,
 				A5DB54ED18F8F380003B9FF7 /* CoreGraphics.framework */,
 				A5DB54EF18F8F380003B9FF7 /* UIKit.framework */,
@@ -479,6 +483,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Exemplify/Exemplify-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = "Exemplify/Exemplify-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -492,6 +501,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Exemplify/Exemplify-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = "Exemplify/Exemplify-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
