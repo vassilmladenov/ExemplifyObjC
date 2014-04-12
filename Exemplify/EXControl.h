@@ -8,14 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "EXArticle.h"
+#import "HTMLParser.h"
 
 @interface EXControl : NSObject
 
 /**
  * Gets the references from the Wikipedia page
- * @param  {NSString       *} query What you would type in Wikipedia search
- * @return {NSMutableArray *}       Array of URLs of the references for
- *                                  the article
+ * @param  {NSString            *} query What you would type in Wikipedia search
+ * @return {NSMutableDictionary *}       Dictionary of <URL, title> pairs of the
+ *                                       references for the article
  */
 - (NSMutableArray *)pullSources:(NSString *)query;
 

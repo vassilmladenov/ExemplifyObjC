@@ -7,7 +7,6 @@
 //
 
 #import "EXControl.h"
-#import "TFHpple.h"
 
 @interface EXControl();
 
@@ -18,28 +17,54 @@
 
 @implementation EXControl
 
-- (NSMutableArray *)pullSources:(NSString *)query;
+- (NSMutableDictionary *)pullSources:(NSString *)query;
 {
-	NSMutableArray *sources = [[NSMutableArray alloc] init];
+	NSMutableDictionary *sources = [[NSMutableDictionary alloc] init];
 	
 	NSURL *wikiURL = [[NSURL alloc] initWithScheme:@"http" host:@"en.wikipedia.org" path:[@"/wiki/" stringByAppendingString:query]];
-	// get block of URLs
-	NSData *wikiData = [NSData dataWithContentsOfURL:wikiURL];
-//	NSError *error = Nil;
-//	NSString *a = [NSString stringWithContentsOfURL:wikiURL encoding:NSUTF8StringEncoding error:&error];
+	
+//	NSError *getSourceError = Nil;
+//	NSString *htmlSource = [NSString stringWithContentsOfURL:wikiURL encoding:NSUTF8StringEncoding error:&getSourceError];
 //	
-//	NSString *startString = @"<h2><span class=\"mw-headline\" id=\"References\">References</span></h2>";
-//	NSString *endString = @"<h2><span class=\"mw-headline\" id=\"External_links\">External links</span></h2>";
-//	
-//	NSRange r1 = [a rangeOfString:startString];
-//	NSRange r2 = [a rangeOfString:endString];
-//	NSRange rSub = NSMakeRange(r1.location + r1.length, r2.location - r1.location - r1.length);
-//	NSString *b = [a substringWithRange:rSub];
-
-	// for every URL in the list
-//	NSLog(@"%@",b);
-	// add to array
-
+//	if (getSourceError) {
+//		NSLog(@"Error getting source: %@", getSourceError);
+//		return Nil;
+//	}
+	
+	NSError *parserError = Nil;
+	HTMLParser *parser = [[HTMLParser alloc] initWithContentsOfURL:wikiURL error:&parserError];
+	
+	if (parserError) {
+		NSLog(@"Error getting source: %@", parserError);
+		return Nil;
+	}
+	
+	// grabs the References tag from the Wikipedia HTML
+	HTMLNode *referencesDiv = [[parser body] findChildWithAttribute:@"class" matchingName:@"reflist" allowPartial:YES];
+	
+	// makes an array of the references, which are <li> tags
+	NSArray *refsArray = [referencesDiv findChildTags:@"li"];
+	
+	// temporary parallel arrays to hold the titles and URLs, will be placed in dictionary eventually
+	NSMutableArray *URLs = [[NSMutableArray alloc] init];
+	NSMutableArray *titles = [[NSMutableArray alloc] init];
+	
+	for (HTMLNode *ref in refsArray) {
+		// get the actual link from the reference
+		HTMLNode *a = [ref findChildWithAttribute:@"rel" matchingName:@"nofollow" allowPartial:YES];
+		
+		NSString *url = [a getAttributeNamed:@"href"]; // get the url
+		NSString *quotedTitle = [a contents]; // get the title, has quotes at start and end
+		// strips the quotes from around the title,
+		NSString *title = [quotedTitle substringWithRange:NSMakeRange(1, [quotedTitle length] - 2)];
+		
+		[URLs addObject:url];
+		[titles addObject:title];
+		
+//		NSLog(@"\n%@", url);
+//		NSLog(@"\n%@", title);
+	}
+	
 	return sources;
 }
 
