@@ -50,8 +50,14 @@
 - (IBAction)discard:(id)sender {
     //move article from main array to discard array
     
+    //return to articles VC
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)keep:(id)sender {
+    //move article from main array to keep array
+    
+    //return to articles VC
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end
