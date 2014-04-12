@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "EXArticle.h"
 
 @interface EXControl : NSObject
 

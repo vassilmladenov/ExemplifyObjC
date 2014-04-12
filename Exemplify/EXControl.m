@@ -21,9 +21,12 @@
 {
 	NSMutableArray *sources = [[NSMutableArray alloc] init];
 	
+	NSURL *wikiURL = [[NSURL alloc] initWithScheme:@"http" host:@"en.wikipedia.org" path:@"TODO"];
 	// get block of URLs
 
 	// for every URL in the list
+	
+	// add to array
 
 	return sources;
 }
@@ -31,10 +34,22 @@
 - (void)makeArticles:(NSMutableArray *)sources
 {
 	// for every URL in sources
+	for (NSURL *url in sources) {
+		// create an EXArticle
+		EXArticle *a = [[EXArticle alloc] init];
+		// fetch the article's data
+		[a fetchArticle:url];
+		// add it to articles
+		[self.articles addObject:a];
+	}
 
-	// create an EXArticle and add it to articles
 	
-	// fetch the article's data	
+
+}
+
+- (NSMutableArray *)getArticles
+{
+	return self.articles;
 }
 
 @end

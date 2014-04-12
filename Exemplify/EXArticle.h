@@ -19,7 +19,7 @@
 /**
  * Builds out EXArticle object:
  * Gets article title, article body
- * @param {NSURL *} url [description]
+ * @param {NSURL *} url URL of article
  */
 - (void)fetchArticle:(NSURL *)url;
 
