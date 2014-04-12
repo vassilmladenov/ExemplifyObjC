@@ -10,4 +10,11 @@
 
 @interface EXArticle : NSObject
 
+@property (strong, nonatomic) NSString *articleTitle;
+@property (strong, nonatomic) NSString *articleBody;
+@property (strong, nonatomic) NSURL *articleURL;
+
+@property (nonatomic) BOOL citing; // will/won't use article
+@property (strong, nonatomic) NSString *citation;
+
 @end
