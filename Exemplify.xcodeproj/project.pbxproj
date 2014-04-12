@@ -18,7 +18,7 @@
 		A58AB5A018F9A3AF00CF995D /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = A58AB59B18F9A3AF00CF995D /* TFHpple.m */; };
 		A58AB5A118F9A3AF00CF995D /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = A58AB59D18F9A3AF00CF995D /* TFHppleElement.m */; };
 		A58AB5A218F9A3AF00CF995D /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = A58AB59F18F9A3AF00CF995D /* XPathQuery.m */; };
-		A58AB5A518F9A52F00CF995D /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A58AB5A418F9A52F00CF995D /* libxml2.dylib */; };
+		A58AB5A618F9A6F000CF995D /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A58AB5A418F9A52F00CF995D /* libxml2.dylib */; };
 		A5DB54EC18F8F380003B9FF7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DB54EB18F8F380003B9FF7 /* Foundation.framework */; };
 		A5DB54EE18F8F380003B9FF7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DB54ED18F8F380003B9FF7 /* CoreGraphics.framework */; };
 		A5DB54F018F8F380003B9FF7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DB54EF18F8F380003B9FF7 /* UIKit.framework */; };
@@ -100,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A58AB5A518F9A52F00CF995D /* libxml2.dylib in Frameworks */,
+				A58AB5A618F9A6F000CF995D /* libxml2.dylib in Frameworks */,
 				A5DB54EE18F8F380003B9FF7 /* CoreGraphics.framework in Frameworks */,
 				A5DB54F018F8F380003B9FF7 /* UIKit.framework in Frameworks */,
 				A5DB54EC18F8F380003B9FF7 /* Foundation.framework in Frameworks */,
