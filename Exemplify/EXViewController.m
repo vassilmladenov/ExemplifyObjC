@@ -29,7 +29,14 @@ NSString *searchText = @"";
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    [self performSegueWithIdentifier:@"DisplaySearchSuggestions" sender:self];
+    [_searchField resignFirstResponder];
+    
+    double delayInSeconds = .25;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            [self performSegueWithIdentifier:@"DisplaySearchSuggestions" sender:self];
+    });
+
 	return YES;
 }
 
