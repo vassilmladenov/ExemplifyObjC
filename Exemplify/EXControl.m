@@ -32,17 +32,21 @@
 	return sources;
 }
 
-- (void)makeArticles:(NSMutableArray *)sources
+- (void)makeArticles:(NSMutableDictionary *)sources
 {
-	// for every URL in sources
-	for (NSURL *url in sources) {
-		// create an EXArticle
+	// for every element in sources
+    [sources enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        
+        // create an EXArticle
 		EXArticle *a = [[EXArticle alloc] init];
+        
 		// fetch the article's data
-		[a fetchArticle:url];
+		[a fetchArticle:key withTitle:obj];
+        
 		// add it to articles
 		[self.articles addObject:a];
-	}
+        
+    }];
 
 	
 

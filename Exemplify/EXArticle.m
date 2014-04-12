@@ -15,19 +15,22 @@
  * @param  {NSURL          *} url URL of article
  * @return {NSMutableArray *}     array of size 2
  */
-+ (NSMutableArray *)getTitleAndBody:(NSURL *)url;
++ (NSString *)getBody:(NSURL *)url;
 
 @end
 
 @implementation EXArticle
 
-- (void)fetchArticle:(NSURL *)url
+- (void)fetchArticle:(NSURL *)url withTitle:(NSString *)title
 {
-	NSMutableArray *content = [EXArticle getTitleAndBody:url];
+	NSString *body = [EXArticle getBody:url];
+    
 	// set article title
-	self.articleTitle = content[0];
+	self.articleTitle = title;
+    
 	// set article body
-	self.articleBody = content[1];
+	self.articleBody = body;
+    
 	// set article URL
 	self.articleURL = url;
 }
@@ -43,10 +46,9 @@
 	return citation;
 }
 
-+ (NSMutableArray *)getTitleAndBody:(NSURL *)url;
++ (NSString *)getBody:(NSURL *)url;
 {
-	NSMutableArray *content = [[NSMutableArray alloc] initWithCapacity:2];
-	
+    NSString *content = @"";
 	// code to set content
 	
 	return content;
