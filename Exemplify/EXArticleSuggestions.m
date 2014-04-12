@@ -32,6 +32,8 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+	EXControl *control = [[EXControl alloc] init];
+	NSMutableArray *refs = [control pullSources:@"Google"];
 }
 
 - (void)didReceiveMemoryWarning
