@@ -46,9 +46,10 @@
 }
 */
 
-- (IBAction)Discard:(id)sender {
-}
+
 - (IBAction)discard:(id)sender {
+    //move article from main array to discard array
+    
 }
 
 - (IBAction)keep:(id)sender {
