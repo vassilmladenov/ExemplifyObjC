@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface EXArticleVC : UIViewController
+- (IBAction)discard:(id)sender;
+- (IBAction)keep:(id)sender;
 
 @end

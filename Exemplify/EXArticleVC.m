@@ -46,4 +46,11 @@
 }
 */
 
+- (IBAction)Discard:(id)sender {
+}
+- (IBAction)discard:(id)sender {
+}
+
+- (IBAction)keep:(id)sender {
+}
 @end
