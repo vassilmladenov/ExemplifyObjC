@@ -25,7 +25,7 @@
 	// get block of URLs
 	NSError *error = Nil;
 	NSString *a = [NSString stringWithContentsOfURL:wikiURL encoding:NSUTF8StringEncoding error:&error];
-	NSLog(a);
+	NSLog(@"%@",a);
 	// for every URL in the list
 	
 	// add to array
