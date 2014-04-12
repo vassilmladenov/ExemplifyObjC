@@ -17,9 +17,8 @@
 
 @implementation EXControl
 
-- (NSMutableDictionary *)pullSources:(NSString *)query;
+- (void)pullSources:(NSString *)query;
 {
-	NSMutableDictionary *sources = [[NSMutableDictionary alloc] init];
 	
 	NSURL *wikiURL = [[NSURL alloc] initWithScheme:@"http" host:@"en.wikipedia.org" path:[@"/wiki/" stringByAppendingString:query]];
 	
@@ -29,7 +28,7 @@
 	// necessary error check
 	if (parserError) {
 		NSLog(@"Error getting source: %@", parserError);
-		return Nil;
+		return;
 	}
 	
 	// grabs the References tag from the Wikipedia HTML
@@ -60,24 +59,24 @@
 		// TODO construct dictionary
 	}
 	
-	return sources;
+	[self makeArticlesWithTitles:titles withURLs:URLs];
 }
 
-- (void)makeArticles:(NSMutableDictionary *)sources
+- (void)makeArticlesWithTitles:(NSMutableArray *)titles withURLs:(NSMutableArray *)URLs
 {
-	// for every element in sources
-    [sources enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+	// for every element, create an article with paired title and url
+    for (int i = 0; i<[titles count]; i++){
         
         // create an EXArticle
 		EXArticle *a = [[EXArticle alloc] init];
         
 		// fetch the article's data
-		[a fetchArticle:key withTitle:obj];
+		[a fetchArticle:URLs[i] withTitle:titles[i]];
         
 		// add it to articles
 		[self.articles addObject:a];
         
-    }];
+    }
 
 	
 

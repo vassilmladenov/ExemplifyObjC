@@ -18,13 +18,13 @@
  * @return {NSMutableDictionary *}       Dictionary of <URL, title> pairs of the
  *                                       references for the article
  */
-- (NSMutableArray *)pullSources:(NSString *)query;
+- (void)pullSources:(NSString *)query;
 
 /**
  * Builds out the private member articles
  * @param  {NSMutableArray *} sources NSMutableArray of URLs
  */
-- (void)makeArticles:(NSMutableArray *)sources;
+- (void)makeArticlesWithTitles:(NSMutableArray *)titles withURLs:(NSMutableArray *)URLs;
 
 /**
  * Returns the list of EXArticle objects for the controller to use
