@@ -73,7 +73,7 @@
 		EXArticle *a = [[EXArticle alloc] init];
         
 		// fetch the article's data
-		[a fetchArticle:URLs[i] withTitle:titles[i]];
+		[a fetchArticle:[[NSURL alloc] initWithString:URLs[i]] withTitle:titles[i]];
         
 		// add it to articles
 		[self.articles addObject:a];

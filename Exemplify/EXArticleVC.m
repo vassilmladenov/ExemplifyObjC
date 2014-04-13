@@ -8,7 +8,9 @@
 
 #import "EXArticleVC.h"
 
-@interface EXArticleVC ()
+@interface EXArticleVC () <UIWebViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @end
 
@@ -27,6 +29,8 @@
 {
     [super viewDidLoad];
     self.navigationItem.title = self.article.title;
+	[self.webView loadRequest:[[NSURLRequest alloc] initWithURL:self.article.URL]];
+	
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,5 +56,41 @@
     //return to articles VC
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+/**
+ * Doesn't properly get main article
+ */
+
+//@synthesize hiddenWebView = _hiddenWebView;
+//
+//- (void)viewWillLayoutSubviews
+//{
+//	[super viewWillLayoutSubviews];
+//	
+//	if (!self.hiddenWebView.superview)
+//	{
+//		[self.view addSubview:self.hiddenWebView];
+//	}
+//}
+//
+//- (UIWebView *)hiddenWebView
+//{
+//	if (!_hiddenWebView) {
+//		_hiddenWebView = [UIWebView.alloc initWithFrame:CGRectZero];
+//		_hiddenWebView.delegate = self;
+//		NSURLRequest *req = [[NSURLRequest alloc] initWithURL:self.article.URL];
+//		[_hiddenWebView loadRequest:req];
+//
+//	}
+//	return _hiddenWebView;
+//}
+//
+//- (void)webViewDidFinishLoad:(UIWebView *)webView
+//{
+//	NSString *documentBodyString = [self.hiddenWebView stringByEvaluatingJavaScriptFromString: @"document.documentElement.innerText"];
+//
+//	NSLog(@"%@", documentBodyString);
+//}
+
 
 @end
