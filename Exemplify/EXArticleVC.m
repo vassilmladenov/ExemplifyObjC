@@ -43,18 +43,8 @@
 
 - (IBAction)discard:(id)sender {
     //move article from main array to discard array
-    NSMutableArray *articles = [[NSUserDefaults standardUserDefaults] objectForKey:@"articles"];
-    NSMutableArray *discardArticles = [[NSUserDefaults standardUserDefaults] objectForKey: @"discardArticles"];
-    NSMutableArray *keptArticles = [[NSUserDefaults standardUserDefaults] objectForKey: @"keptArticles"];
-    
-    [keptArticles removeObject:self.article];
-    [articles removeObject:self.article];
-    [discardArticles addObject:self.article];
-    
-    [[NSUserDefaults standardUserDefaults] setObject:articles forKey:@"articles"];
-    [[NSUserDefaults standardUserDefaults] setObject:discardArticles forKey:@"keptArticles"];
-    
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    self.article.kept = NO;
+    self.article.processed = YES;
     
     //return to articles VC
     [self.navigationController popViewControllerAnimated:YES];
@@ -62,17 +52,8 @@
 
 - (IBAction)keep:(id)sender {
     //move article from main array to keep array
-    
-    NSMutableArray *articles = [[NSUserDefaults standardUserDefaults] objectForKey:@"articles"];
-    NSMutableArray *keptArticles = [[NSUserDefaults standardUserDefaults] objectForKey: @"keptArticles"];
-    
-    [articles removeObject:self.article];
-    [keptArticles addObject:self.article];
-    
-    [[NSUserDefaults standardUserDefaults] setObject:articles forKey:@"articles"];
-    [[NSUserDefaults standardUserDefaults] setObject:keptArticles forKey:@"keptArticles"];
-    
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    self.article.kept = YES;
+    self.article.processed = YES;
     
     //return to articles VC
     [self.navigationController popViewControllerAnimated:YES];

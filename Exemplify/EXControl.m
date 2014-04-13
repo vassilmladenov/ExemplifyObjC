@@ -82,34 +82,11 @@
         
     }
     
-    [[NSUserDefaults standardUserDefaults] setObject:self.articles forKey:@"articles"];
-    [[NSUserDefaults standardUserDefaults] setObject:self.keptArticles forKey:@"keptArticles"];
-    [[NSUserDefaults standardUserDefaults] setObject:self.discardedArticles forKey:@"discardedArticles"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
 }
 
 - (NSMutableArray *)getArticles
 {
 	return self.articles;
-}
-
--(void)keepArticle:(EXArticle *)article{
-    
-    self.articles = [[NSUserDefaults standardUserDefaults] objectForKey:@"articles"];
-    self.keptArticles = [[NSUserDefaults standardUserDefaults] objectForKey: @"keptArticles"];
-    
-    [self.articles removeObject:article];
-    [self.keptArticles addObject:article];
-    
-    [[NSUserDefaults standardUserDefaults] setObject:self.articles forKey:@"articles"];
-    [[NSUserDefaults standardUserDefaults] setObject:self.keptArticles forKey:@"keptArticles"];
-    
-}
-
--(void)discardArticle:(EXArticle *)article{
-    [self.articles removeObject:article];
-    [self.discardedArticles addObject:article];
 }
 
 @end

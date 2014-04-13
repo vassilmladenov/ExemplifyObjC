@@ -14,7 +14,6 @@
 @interface EXArticleVC : UIViewController
 
 @property EXArticle *article;
-@property EXArticleSuggestions *parent;
 
 - (IBAction)discard:(id)sender;
 - (IBAction)keep:(id)sender;
