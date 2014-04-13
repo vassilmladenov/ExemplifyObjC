@@ -24,6 +24,7 @@ EXControl *control;
 
     [super viewDidLoad];
     
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     
     if (!child)
         child = [self.storyboard instantiateViewControllerWithIdentifier:@"articleSuggestions"];
