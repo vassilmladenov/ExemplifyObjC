@@ -32,4 +32,7 @@
  */
 - (NSMutableArray *)getArticles;
 
+-(void)keepArticle:(EXArticle *)article;
+-(void)discardArticle:(EXArticle *)article;
+
 @end

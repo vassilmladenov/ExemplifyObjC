@@ -26,13 +26,13 @@
 	NSString *body = [EXArticle getBody:url];
     
 	// set article title
-	self.articleTitle = title;
+	self.title = title;
     
 	// set article body
-	self.articleBody = body;
+	self.body = body;
     
 	// set article URL
-	self.articleURL = url;
+	self.URL = url;
 }
 
 - (NSString *)citeArticle

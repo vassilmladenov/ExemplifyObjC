@@ -12,6 +12,8 @@
 
 // stores the list of articles, contents of type EXArticle
 @property NSMutableArray *articles;
+@property NSMutableArray *keptArticles;
+@property NSMutableArray *discardedArticles;
 
 @end
 
@@ -62,6 +64,8 @@
 
 - (void)makeArticlesWithTitles:(NSMutableArray *)titles withURLs:(NSMutableArray *)URLs
 {
+    self.articles = [[NSMutableArray alloc] init];
+    
 	// for every element, create an article with paired title and url
     for (int i = 0; i < [titles count]; i++){
         
@@ -81,6 +85,16 @@
 - (NSMutableArray *)getArticles
 {
 	return self.articles;
+}
+
+-(void)keepArticle:(EXArticle *)article{
+    [self.articles removeObject:article];
+    [self.keptArticles addObject:article];
+}
+
+-(void)discardArticle:(EXArticle *)article{
+    [self.articles removeObject:article];
+    [self.discardedArticles addObject:article];
 }
 
 @end
