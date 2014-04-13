@@ -289,4 +289,48 @@ NSMutableArray *discardedArticles;
     self.keptButton.selected = YES;
     [self.tableView reloadData];
 }
+
+- (IBAction)swipeRight:(id)sender {
+    if (whichArray <2){
+        whichArray = (whichArray + 1) % 3;
+        if (whichArray == 0){
+            self.discardButton.selected = YES;
+            self.unmarkedButton.selected = NO;
+            self.keptButton.selected = NO;
+        }
+        else if (whichArray == 1){
+            self.discardButton.selected = NO;
+            self.unmarkedButton.selected = YES;
+            self.keptButton.selected = NO;
+        }
+        else if (whichArray == 2){
+            self.discardButton.selected = NO;
+            self.unmarkedButton.selected = NO;
+            self.keptButton.selected = YES;
+        }
+            [self.tableView reloadData];
+    }
+}
+
+- (IBAction)swipeLeft:(id)sender {
+    if (whichArray>0){
+        whichArray = (whichArray - 1) % 3;
+        if (whichArray == 0){
+            self.discardButton.selected = YES;
+            self.unmarkedButton.selected = NO;
+            self.keptButton.selected = NO;
+        }
+        else if (whichArray == 1){
+            self.discardButton.selected = NO;
+            self.unmarkedButton.selected = YES;
+            self.keptButton.selected = NO;
+        }
+        else if (whichArray == 2){
+            self.discardButton.selected = NO;
+            self.unmarkedButton.selected = NO;
+            self.keptButton.selected = YES;
+        }
+        [self.tableView reloadData];
+    }
+}
 @end
