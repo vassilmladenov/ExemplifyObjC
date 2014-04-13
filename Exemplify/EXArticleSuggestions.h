@@ -26,8 +26,5 @@
 - (IBAction)keptButtonPressed:(id)sender;
 - (IBAction)segmentedControlPressed:(id)sender;
 
-- (IBAction)swipeRight:(id)sender;
-- (IBAction)swipeLeft:(id)sender;
-
 @end
 
