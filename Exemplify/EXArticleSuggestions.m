@@ -118,7 +118,7 @@ NSMutableArray *discardedArticles;
             }
         }
     }
-    
+    self.segmentButton.selectedSegmentIndex = whichArray;
     [self.tableView reloadData];
 }
 
@@ -262,6 +262,5 @@ NSMutableArray *discardedArticles;
 		self.segmentButton.selectedSegmentIndex--;
     }
 }
-
 
 @end
