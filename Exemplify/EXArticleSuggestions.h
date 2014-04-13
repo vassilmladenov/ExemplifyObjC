@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 #import "EXControl.h"
 #import "EXArticle.h"
 #import "EXArticleVC.h"
 
 @interface EXArticleSuggestions : UITableViewController
 @property EXControl *control;
+- (IBAction)finishPressed:(id)sender;
 
 @end

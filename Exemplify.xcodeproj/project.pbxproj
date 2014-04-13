@@ -15,6 +15,7 @@
 		8C97F59F18F999B10029BE9D /* MainViewController2.txt in Sources */ = {isa = PBXBuildFile; fileRef = 8C97F59518F999B10029BE9D /* MainViewController2.txt */; };
 		8C97F5A018F999B10029BE9D /* NotesViewController2.txt in Sources */ = {isa = PBXBuildFile; fileRef = 8C97F59718F999B10029BE9D /* NotesViewController2.txt */; };
 		A58AB5A618F9A6F000CF995D /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A58AB5A418F9A52F00CF995D /* libxml2.dylib */; };
+		A59B9BEA18FA244C007EAD96 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59B9BE918FA244C007EAD96 /* MessageUI.framework */; };
 		A5B4A90C18F9BAC000EBCD05 /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B4A90918F9BAC000EBCD05 /* HTMLNode.m */; };
 		A5B4A90D18F9BAC000EBCD05 /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B4A90B18F9BAC000EBCD05 /* HTMLParser.m */; };
 		A5DB54EC18F8F380003B9FF7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DB54EB18F8F380003B9FF7 /* Foundation.framework */; };
@@ -60,6 +61,7 @@
 		8C97F59618F999B10029BE9D /* NotesViewController.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NotesViewController.txt; sourceTree = "<group>"; };
 		8C97F59718F999B10029BE9D /* NotesViewController2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NotesViewController2.txt; sourceTree = "<group>"; };
 		A58AB5A418F9A52F00CF995D /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		A59B9BE918FA244C007EAD96 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		A5B4A90818F9BAC000EBCD05 /* HTMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLNode.h; sourceTree = "<group>"; };
 		A5B4A90918F9BAC000EBCD05 /* HTMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLNode.m; sourceTree = "<group>"; };
 		A5B4A90A18F9BAC000EBCD05 /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLParser.h; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A59B9BEA18FA244C007EAD96 /* MessageUI.framework in Frameworks */,
 				A58AB5A618F9A6F000CF995D /* libxml2.dylib in Frameworks */,
 				A5DB54EE18F8F380003B9FF7 /* CoreGraphics.framework in Frameworks */,
 				A5DB54F018F8F380003B9FF7 /* UIKit.framework in Frameworks */,
@@ -152,6 +155,7 @@
 		A5DB54EA18F8F380003B9FF7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A59B9BE918FA244C007EAD96 /* MessageUI.framework */,
 				A58AB5A418F9A52F00CF995D /* libxml2.dylib */,
 				A5DB54EB18F8F380003B9FF7 /* Foundation.framework */,
 				A5DB54ED18F8F380003B9FF7 /* CoreGraphics.framework */,
