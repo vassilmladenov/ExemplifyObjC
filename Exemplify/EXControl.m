@@ -47,14 +47,16 @@
 		
 		NSString *url = [a getAttributeNamed:@"href"]; // get the url
 		NSString *quotedTitle = [a contents]; // get the title, has quotes at start and end
-		// strips the quotes from around the title,
-		NSString *title = [quotedTitle substringWithRange:NSMakeRange(1, [quotedTitle length] - 2)];
-		
-		[URLs addObject:url];
-		[titles addObject:title];
-		
+		// strips quotes from title, has to be minus 2 because Range is (startIndex, length) not (startIndex, endIndex)
+		if ([quotedTitle length] > 2) {
+			NSString *title = [quotedTitle substringWithRange:NSMakeRange(1, [quotedTitle length] - 2)];
+			if (url && title) {
+				[URLs addObject:url];
+				[titles addObject:title];
+			}
+		}
 	}
-	
+	NSLog(@"Done");
 	[self makeArticlesWithTitles:titles withURLs:URLs];
 }
 
