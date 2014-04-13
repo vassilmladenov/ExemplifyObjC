@@ -132,7 +132,7 @@ NSMutableArray *discardedArticles;
 			[x appendString:[a citeArticle]];
 			[x appendString:@"\n\n"];
 		}
-        [mailBody appendString: @"Sources Titles and Links to Citations:<br><br>"];
+        [mailBody appendString: @"Source Titles and Links to Citations:<br><br>"];
 		
 		
         if([x length] > 0)
@@ -190,6 +190,7 @@ NSMutableArray *discardedArticles;
 			[discardedArticles removeAllObjects];
             [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"searchText"];
             [[NSUserDefaults standardUserDefaults] synchronize];
+            [self performSelector:@selector(dismissController) withObject:nil afterDelay:1];
             
             break;
         case MFMailComposeResultFailed:
@@ -201,14 +202,16 @@ NSMutableArray *discardedArticles;
             break;
     }
     
-    
-    
     // Close the Mail Interface
     [self dismissViewControllerAnimated:YES completion:NULL];
-    [self performSelector:@selector(showMessage:) withObject:messageAlert afterDelay:0.4];
+    [self performSelector:@selector(showMessage:) withObject:messageAlert afterDelay:.5];
     
     
 }
+- (void) dismissController {
+    [[self navigationController] popViewControllerAnimated:YES];
+}
+
 
 -(void)showMessage:(UIAlertView *)messageAlert
 {
