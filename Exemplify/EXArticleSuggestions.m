@@ -77,7 +77,7 @@ NSMutableArray *discardedArticles;
     articleView.article = [articles objectAtIndex:[self.tableView indexPathForSelectedRow].row];
 }
 
--(void) viewDidAppear:(BOOL)animated{
+-(void) viewWillAppear:(BOOL)animated{
     for (int i = 0; i< [articles count]; i++)
     {
         EXArticle *a = articles[i];
