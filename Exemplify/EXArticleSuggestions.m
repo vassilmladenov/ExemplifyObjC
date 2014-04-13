@@ -70,6 +70,7 @@ NSMutableArray *articles;
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
     EXArticleVC *articleView = segue.destinationViewController;
+    articleView.parent = self;
     articleView.article = [articles objectAtIndex:[self.tableView indexPathForSelectedRow].row];
 }
 
