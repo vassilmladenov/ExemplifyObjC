@@ -11,7 +11,6 @@
 		8C11FAAF18F90BB400E405CB /* EXArticleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C11FAAE18F90BB400E405CB /* EXArticleVC.m */; };
 		8C97F59B18F999B10029BE9D /* Cell2.txt in Sources */ = {isa = PBXBuildFile; fileRef = 8C97F58E18F999B10029BE9D /* Cell2.txt */; };
 		8C97F59C18F999B10029BE9D /* CurrentNotesViewController2.txt in Sources */ = {isa = PBXBuildFile; fileRef = 8C97F59018F999B10029BE9D /* CurrentNotesViewController2.txt */; };
-		8C97F59D18F999B10029BE9D /* FlipsideViewController2.txt in Sources */ = {isa = PBXBuildFile; fileRef = 8C97F59218F999B10029BE9D /* FlipsideViewController2.txt */; };
 		8C97F59E18F999B10029BE9D /* main.txt in Sources */ = {isa = PBXBuildFile; fileRef = 8C97F59318F999B10029BE9D /* main.txt */; };
 		8C97F59F18F999B10029BE9D /* MainViewController2.txt in Sources */ = {isa = PBXBuildFile; fileRef = 8C97F59518F999B10029BE9D /* MainViewController2.txt */; };
 		8C97F5A018F999B10029BE9D /* NotesViewController2.txt in Sources */ = {isa = PBXBuildFile; fileRef = 8C97F59718F999B10029BE9D /* NotesViewController2.txt */; };
@@ -55,8 +54,6 @@
 		8C97F58E18F999B10029BE9D /* Cell2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cell2.txt; sourceTree = "<group>"; };
 		8C97F58F18F999B10029BE9D /* CurrentNotesViewController.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CurrentNotesViewController.txt; sourceTree = "<group>"; };
 		8C97F59018F999B10029BE9D /* CurrentNotesViewController2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CurrentNotesViewController2.txt; sourceTree = "<group>"; };
-		8C97F59118F999B10029BE9D /* FlipsideViewController.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FlipsideViewController.txt; sourceTree = "<group>"; };
-		8C97F59218F999B10029BE9D /* FlipsideViewController2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FlipsideViewController2.txt; sourceTree = "<group>"; };
 		8C97F59318F999B10029BE9D /* main.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.txt; sourceTree = "<group>"; };
 		8C97F59418F999B10029BE9D /* MainViewController.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MainViewController.txt; sourceTree = "<group>"; };
 		8C97F59518F999B10029BE9D /* MainViewController2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MainViewController2.txt; sourceTree = "<group>"; };
@@ -124,8 +121,6 @@
 				8C97F58E18F999B10029BE9D /* Cell2.txt */,
 				8C97F58F18F999B10029BE9D /* CurrentNotesViewController.txt */,
 				8C97F59018F999B10029BE9D /* CurrentNotesViewController2.txt */,
-				8C97F59118F999B10029BE9D /* FlipsideViewController.txt */,
-				8C97F59218F999B10029BE9D /* FlipsideViewController2.txt */,
 				8C97F59318F999B10029BE9D /* main.txt */,
 				8C97F59418F999B10029BE9D /* MainViewController.txt */,
 				8C97F59518F999B10029BE9D /* MainViewController2.txt */,
@@ -176,9 +171,9 @@
 				8C11FAAE18F90BB400E405CB /* EXArticleVC.m */,
 				A5DB552018F8FC8C003B9FF7 /* EXArticleSuggestions.h */,
 				A5DB552118F8FC8C003B9FF7 /* EXArticleSuggestions.m */,
-				A5DB552618F8FDC7003B9FF7 /* Model */,
 				A5DB550018F8F380003B9FF7 /* EXViewController.h */,
 				A5DB550118F8F380003B9FF7 /* EXViewController.m */,
+				A5DB552618F8FDC7003B9FF7 /* Model */,
 				A5DB550318F8F380003B9FF7 /* Images.xcassets */,
 				A5DB54F218F8F380003B9FF7 /* Supporting Files */,
 			);
@@ -336,7 +331,6 @@
 				A5DB54F818F8F380003B9FF7 /* main.m in Sources */,
 				8C97F5A018F999B10029BE9D /* NotesViewController2.txt in Sources */,
 				8C97F59F18F999B10029BE9D /* MainViewController2.txt in Sources */,
-				8C97F59D18F999B10029BE9D /* FlipsideViewController2.txt in Sources */,
 				8C11FAAC18F907E500E405CB /* EXArticle.m in Sources */,
 				A5DB552218F8FC8C003B9FF7 /* EXArticleSuggestions.m in Sources */,
 				8C11FAAF18F90BB400E405CB /* EXArticleVC.m in Sources */,

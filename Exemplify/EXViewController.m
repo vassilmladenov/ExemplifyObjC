@@ -14,11 +14,15 @@
 
 @implementation EXViewController
 NSString *searchText = @"";
-
+EXControl *control;
 
 - (void)viewDidLoad
 {
+    
+    self.searchField.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"searchText"];
     [super viewDidLoad];
+    
+
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -29,6 +33,19 @@ NSString *searchText = @"";
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
+    if ([self.searchField.text  isEqual: @""]) return NO;
+    
+    searchText = self.searchField.text;
+    
+    if (searchText != [[NSUserDefaults standardUserDefaults] objectForKey:@"searchText"]){
+        
+        [[NSUserDefaults standardUserDefaults] setObject:searchText forKey:@"searchText"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        control = [[EXControl alloc] init];
+        
+        [control pullSources:searchText];
+    }
     [self.searchField resignFirstResponder];
     
     double delayInSeconds = .25;
@@ -40,6 +57,11 @@ NSString *searchText = @"";
 	return YES;
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    EXArticleSuggestions *tableView = segue.destinationViewController;
+    tableView.control = control;
+}
 
 
 

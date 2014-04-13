@@ -14,6 +14,10 @@
 
 @implementation EXArticleSuggestions
 
+
+NSMutableArray *articles;
+
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -26,14 +30,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-	EXControl *control = [[EXControl alloc] init];
-	NSMutableArray *refs = [control pullSources:@"Google"];
+
+    articles = [self.control getArticles];
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,24 +49,33 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
+    return [articles count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Article" forIndexPath:indexPath];
     
-    cell.textLabel.text = @"Title here";
+    cell.textLabel.text = ((EXArticle*)articles[indexPath.row]).title;
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self performSegueWithIdentifier:@"DisplayArticle" sender:self];
     
+    [self performSegueWithIdentifier:@"DisplayArticle" sender:self];
     
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    EXArticleVC *articleView = segue.destinationViewController;
+    articleView.article = [articles objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+}
+
+-(void) viewDidAppear:(BOOL)animated{
+    [self.tableView reloadData];
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath

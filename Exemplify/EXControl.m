@@ -12,6 +12,8 @@
 
 // stores the list of articles, contents of type EXArticle
 @property NSMutableArray *articles;
+@property NSMutableArray *keptArticles;
+@property NSMutableArray *discardedArticles;
 
 @end
 
@@ -48,11 +50,13 @@
 		NSString *url = [a getAttributeNamed:@"href"]; // get the url
 		NSString *quotedTitle = [a contents]; // get the title, has quotes at start and end
 		// strips the quotes from around the title,
-		NSString *title = [quotedTitle substringWithRange:NSMakeRange(1, [quotedTitle length] - 2)];
-		
-		[URLs addObject:url];
-		[titles addObject:title];
-		
+        if ([quotedTitle length] > 2) {
+            NSString *title = [quotedTitle substringWithRange:NSMakeRange(1, [quotedTitle length] - 2)];
+            if (url && title) {
+                [URLs addObject:url];
+                [titles addObject:title];
+            }
+        }
 	}
 	
 	[self makeArticlesWithTitles:titles withURLs:URLs];
@@ -60,6 +64,8 @@
 
 - (void)makeArticlesWithTitles:(NSMutableArray *)titles withURLs:(NSMutableArray *)URLs
 {
+    self.articles = [[NSMutableArray alloc] init];
+    
 	// for every element, create an article with paired title and url
     for (int i = 0; i < [titles count]; i++){
         
@@ -79,6 +85,16 @@
 - (NSMutableArray *)getArticles
 {
 	return self.articles;
+}
+
+-(void)keepArticle:(EXArticle *)article{
+    [self.articles removeObject:article];
+    [self.keptArticles addObject:article];
+}
+
+-(void)discardArticle:(EXArticle *)article{
+    [self.articles removeObject:article];
+    [self.discardedArticles addObject:article];
 }
 
 @end

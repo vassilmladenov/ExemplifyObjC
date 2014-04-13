@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EXArticleSuggestions.h"
+#import "EXControl.h"
+#import "EXArticle.h"
 
 @interface EXViewController : UIViewController
 
