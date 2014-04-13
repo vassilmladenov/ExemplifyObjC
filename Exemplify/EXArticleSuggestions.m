@@ -190,7 +190,7 @@ NSMutableArray *discardedArticles;
 			[discardedArticles removeAllObjects];
             [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"searchText"];
             [[NSUserDefaults standardUserDefaults] synchronize];
-            [self performSelector:@selector(dismissController) withObject:nil afterDelay:1];
+            [self performSelector:@selector(dismissController) withObject:nil afterDelay:.5];
             
             break;
         case MFMailComposeResultFailed:
@@ -204,7 +204,6 @@ NSMutableArray *discardedArticles;
     
     // Close the Mail Interface
     [self dismissViewControllerAnimated:YES completion:NULL];
-    [self performSelector:@selector(showMessage:) withObject:messageAlert afterDelay:.5];
     
     
 }
