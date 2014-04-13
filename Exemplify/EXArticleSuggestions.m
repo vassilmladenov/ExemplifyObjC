@@ -14,15 +14,17 @@
 
 @implementation EXArticleSuggestions
 
+int whichArray = 1;
 
 NSMutableArray *articles;
+NSMutableArray *unmarkedArticles;
 NSMutableArray *keptArticles;
 NSMutableArray *discardedArticles;
 
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithStyle:style];
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
     }
@@ -34,8 +36,11 @@ NSMutableArray *discardedArticles;
     [super viewDidLoad];
 
     articles = [self.control getArticles];
+    unmarkedArticles = [[NSMutableArray alloc]initWithArray:articles];
     keptArticles = [[NSMutableArray alloc]init];
     discardedArticles = [[NSMutableArray alloc]init];
+    
+    self.unmarkedButton.selected = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,14 +58,26 @@ NSMutableArray *discardedArticles;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [articles count];
+    if (whichArray == 0)
+        return [discardedArticles count];
+    else if (whichArray == 1)
+        return [unmarkedArticles count];
+    else if (whichArray == 2)
+        return [keptArticles count];
+    
+    else return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Article" forIndexPath:indexPath];
     
-    cell.textLabel.text = ((EXArticle*)articles[indexPath.row]).title;
+    if (whichArray == 0)
+        cell.textLabel.text = ((EXArticle*)discardedArticles[indexPath.row]).title;
+    else if (whichArray == 1)
+    cell.textLabel.text = ((EXArticle*)unmarkedArticles[indexPath.row]).title;
+    else if (whichArray == 2)
+        cell.textLabel.text = ((EXArticle*)keptArticles[indexPath.row]).title;
     
     return cell;
 }
@@ -74,7 +91,12 @@ NSMutableArray *discardedArticles;
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
     EXArticleVC *articleView = segue.destinationViewController;
-    articleView.article = [articles objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+    if (whichArray == 0)
+        articleView.article = [discardedArticles objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+    else if (whichArray == 1)
+    articleView.article = [unmarkedArticles objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+    else if (whichArray == 2)
+        articleView.article = [keptArticles objectAtIndex:[self.tableView indexPathForSelectedRow].row];
 }
 
 -(void) viewWillAppear:(BOOL)animated{
@@ -83,11 +105,15 @@ NSMutableArray *discardedArticles;
         EXArticle *a = articles[i];
         if (a.processed){
             if (a.kept){
-                [articles removeObject:a];
+                [discardedArticles removeObject:a];
+                [unmarkedArticles removeObject:a];
+                [keptArticles removeObject:a];
                 [keptArticles addObject:a];
             }
             else{
-                [articles removeObject:a];
+                [discardedArticles removeObject:a];
+                [keptArticles removeObject:a];
+                [unmarkedArticles removeObject:a];
                 [discardedArticles addObject:a];
             }
         }
@@ -240,4 +266,27 @@ NSMutableArray *discardedArticles;
 }
 */
 
+- (IBAction)discardedButtonPressed:(id)sender {
+    whichArray = 0;
+    self.discardButton.selected = YES;
+    self.unmarkedButton.selected = NO;
+    self.keptButton.selected = NO;
+    [self.tableView reloadData];
+}
+
+- (IBAction)unmarkedButtonPressed:(id)sender {
+    whichArray = 1;
+    self.discardButton.selected = NO;
+    self.unmarkedButton.selected = YES;
+    self.keptButton.selected = NO;
+    [self.tableView reloadData];
+}
+
+- (IBAction)keptButtonPressed:(id)sender {
+    whichArray = 2;
+    self.discardButton.selected = NO;
+    self.unmarkedButton.selected = NO;
+    self.keptButton.selected = YES;
+    [self.tableView reloadData];
+}
 @end

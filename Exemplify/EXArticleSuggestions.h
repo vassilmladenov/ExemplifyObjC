@@ -12,8 +12,18 @@
 #import "EXArticle.h"
 #import "EXArticleVC.h"
 
-@interface EXArticleSuggestions : UITableViewController <MFMailComposeViewControllerDelegate>
+@interface EXArticleSuggestions : UIViewController <MFMailComposeViewControllerDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property EXControl *control;
 - (IBAction)finishPressed:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIButton *discardButton;
+@property (weak, nonatomic) IBOutlet UIButton *unmarkedButton;
+@property (weak, nonatomic) IBOutlet UIButton *keptButton;
+
+- (IBAction)discardedButtonPressed:(id)sender;
+- (IBAction)unmarkedButtonPressed:(id)sender;
+- (IBAction)keptButtonPressed:(id)sender;
+
 @end
+
