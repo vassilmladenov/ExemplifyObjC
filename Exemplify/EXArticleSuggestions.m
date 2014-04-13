@@ -215,7 +215,17 @@ NSMutableArray *discardedArticles;
     [messageAlert show];
 }
 
-
+- (IBAction)segmentedControlPressed:(id)sender {
+    if (self.segmentButton.selectedSegmentIndex == 0) {
+		[self discardedButtonPressed:sender];
+    }
+    if (self.segmentButton.selectedSegmentIndex == 1) {
+		[self unmarkedButtonPressed:sender];
+    }
+    if (self.segmentButton.selectedSegmentIndex == 2) {
+		[self keptButtonPressed:sender];
+    }
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -308,8 +318,9 @@ NSMutableArray *discardedArticles;
             self.unmarkedButton.selected = NO;
             self.keptButton.selected = YES;
         }
-            [self.tableView reloadData];
-    }
+		[self.tableView reloadData];
+		self.segmentButton.selectedSegmentIndex++;
+	}
 }
 
 - (IBAction)swipeLeft:(id)sender {
@@ -331,6 +342,7 @@ NSMutableArray *discardedArticles;
             self.keptButton.selected = YES;
         }
         [self.tableView reloadData];
+		self.segmentButton.selectedSegmentIndex--;
     }
 }
 @end

@@ -68,45 +68,22 @@
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem width="93" style="plain" id="TbQ-iW-g6m">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yeZ-To-doG">
-                                            <rect key="frame" x="16" y="6" width="93" height="33"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Q7D-Tb-m1N"/>
+                                    <barButtonItem style="plain" id="WSh-Vk-xeH">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="1" id="LQJ-Hg-eZD">
+                                            <rect key="frame" x="18" y="8" width="285" height="29"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Discarded">
-                                                <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
+                                            <segments>
+                                                <segment title="Discarded"/>
+                                                <segment title="Unmarked"/>
+                                                <segment title="Kept"/>
+                                            </segments>
                                             <connections>
-                                                <action selector="discardedButtonPressed:" destination="lvP-pW-1C5" eventType="touchUpInside" id="hVP-pa-fua"/>
+                                                <action selector="segmentedControlPressed:" destination="lvP-pW-1C5" eventType="valueChanged" id="yhs-5K-LHT"/>
                                             </connections>
-                                        </button>
+                                        </segmentedControl>
                                     </barButtonItem>
-                                    <barButtonItem width="90" style="plain" id="9P1-Fk-XCA">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qdI-oU-Kd6">
-                                            <rect key="frame" x="119" y="6" width="90" height="33"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Unmarked">
-                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="unmarkedButtonPressed:" destination="lvP-pW-1C5" eventType="touchUpInside" id="FH0-PZ-ywy"/>
-                                            </connections>
-                                        </button>
-                                    </barButtonItem>
-                                    <barButtonItem width="93" style="plain" id="3Kl-dn-I12">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Vko-v1-Txn">
-                                            <rect key="frame" x="219" y="6" width="93" height="33"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Kept">
-                                                <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="keptButtonPressed:" destination="lvP-pW-1C5" eventType="touchUpInside" id="obd-wG-7ig"/>
-                                            </connections>
-                                        </button>
-                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="o6d-Qy-LHb"/>
                                 </items>
                             </toolbar>
                             <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="TOQ-Hl-dv7">
@@ -139,20 +116,6 @@
                                     <outlet property="delegate" destination="lvP-pW-1C5" id="QJd-7L-ouv"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gWB-MK-tKm">
-                                <rect key="frame" x="215" y="518" width="3" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES" heightSizable="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="moh-ug-AwE">
-                                <rect key="frame" x="105" y="518" width="3" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES" heightSizable="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -161,6 +124,7 @@
                             <outletCollection property="gestureRecognizers" destination="r3v-M4-M1r" appends="YES" id="h4q-zJ-8Bt"/>
                         </connections>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Article Select" id="FNb-KH-oIG">
                         <barButtonItem key="rightBarButtonItem" title="Finish" id="1lr-om-enc">
                             <connections>
@@ -168,21 +132,20 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="discardButton" destination="yeZ-To-doG" id="KPj-ds-46g"/>
-                        <outlet property="keptButton" destination="Vko-v1-Txn" id="IIM-h1-WBV"/>
+                        <outlet property="segmentButton" destination="LQJ-Hg-eZD" id="LWp-0G-dM0"/>
                         <outlet property="tableView" destination="TOQ-Hl-dv7" id="JSk-Jn-xGa"/>
-                        <outlet property="unmarkedButton" destination="qdI-oU-Kd6" id="YAM-Jw-er6"/>
                         <segue destination="clw-fW-5kl" kind="push" identifier="DisplayArticle" id="PGq-y0-mYb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hou-DG-CG8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="sHq-n8-ZJK">
+                <swipeGestureRecognizer direction="left" id="sHq-n8-ZJK">
                     <connections>
                         <action selector="swipeRight:" destination="lvP-pW-1C5" id="Ept-Vx-Npv"/>
                     </connections>
                 </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="left" id="r3v-M4-M1r">
+                <swipeGestureRecognizer direction="right" id="r3v-M4-M1r">
                     <connections>
                         <action selector="swipeLeft:" destination="lvP-pW-1C5" id="EqS-3r-dhj"/>
                     </connections>

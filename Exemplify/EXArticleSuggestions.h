@@ -16,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property EXControl *control;
 - (IBAction)finishPressed:(id)sender;
-
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentButton;
 @property (weak, nonatomic) IBOutlet UIButton *discardButton;
 @property (weak, nonatomic) IBOutlet UIButton *unmarkedButton;
 @property (weak, nonatomic) IBOutlet UIButton *keptButton;
@@ -24,6 +24,7 @@
 - (IBAction)discardedButtonPressed:(id)sender;
 - (IBAction)unmarkedButtonPressed:(id)sender;
 - (IBAction)keptButtonPressed:(id)sender;
+- (IBAction)segmentedControlPressed:(id)sender;
 
 - (IBAction)swipeRight:(id)sender;
 - (IBAction)swipeLeft:(id)sender;
