@@ -227,97 +227,28 @@ NSMutableArray *discardedArticles;
     }
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 - (IBAction)discardedButtonPressed:(id)sender {
     whichArray = 0;
-    self.discardButton.selected = YES;
-    self.unmarkedButton.selected = NO;
-    self.keptButton.selected = NO;
+
     [self.tableView reloadData];
 }
 
 - (IBAction)unmarkedButtonPressed:(id)sender {
     whichArray = 1;
-    self.discardButton.selected = NO;
-    self.unmarkedButton.selected = YES;
-    self.keptButton.selected = NO;
+
     [self.tableView reloadData];
 }
 
 - (IBAction)keptButtonPressed:(id)sender {
     whichArray = 2;
-    self.discardButton.selected = NO;
-    self.unmarkedButton.selected = NO;
-    self.keptButton.selected = YES;
+
     [self.tableView reloadData];
 }
 
 - (IBAction)swipeRight:(id)sender {
     if (whichArray <2){
         whichArray = (whichArray + 1) % 3;
-        if (whichArray == 0){
-            self.discardButton.selected = YES;
-            self.unmarkedButton.selected = NO;
-            self.keptButton.selected = NO;
-        }
-        else if (whichArray == 1){
-            self.discardButton.selected = NO;
-            self.unmarkedButton.selected = YES;
-            self.keptButton.selected = NO;
-        }
-        else if (whichArray == 2){
-            self.discardButton.selected = NO;
-            self.unmarkedButton.selected = NO;
-            self.keptButton.selected = YES;
-        }
+
 		[self.tableView reloadData];
 		self.segmentButton.selectedSegmentIndex++;
 	}
@@ -326,21 +257,7 @@ NSMutableArray *discardedArticles;
 - (IBAction)swipeLeft:(id)sender {
     if (whichArray>0){
         whichArray = (whichArray - 1) % 3;
-        if (whichArray == 0){
-            self.discardButton.selected = YES;
-            self.unmarkedButton.selected = NO;
-            self.keptButton.selected = NO;
-        }
-        else if (whichArray == 1){
-            self.discardButton.selected = NO;
-            self.unmarkedButton.selected = YES;
-            self.keptButton.selected = NO;
-        }
-        else if (whichArray == 2){
-            self.discardButton.selected = NO;
-            self.unmarkedButton.selected = NO;
-            self.keptButton.selected = YES;
-        }
+
         [self.tableView reloadData];
 		self.segmentButton.selectedSegmentIndex--;
     }
