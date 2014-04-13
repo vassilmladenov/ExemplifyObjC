@@ -12,7 +12,7 @@
 #import "EXArticle.h"
 #import "EXArticleVC.h"
 
-@interface EXArticleSuggestions : UITableViewController
+@interface EXArticleSuggestions : UITableViewController <MFMailComposeViewControllerDelegate>
 @property EXControl *control;
 - (IBAction)finishPressed:(id)sender;
 

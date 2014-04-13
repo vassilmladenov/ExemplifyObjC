@@ -40,7 +40,7 @@
 	NSString *citation;
 
 	// send article URL to easybib
-	
+	citation = @"MAGICAL";
 	// set MLA formatted citation  
 
 	return citation;

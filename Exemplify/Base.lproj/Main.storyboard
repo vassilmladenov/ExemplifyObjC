@@ -106,10 +106,10 @@
                                 <state key="normal" title="Finish">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="finishPressed:" destination="sHS-FS-Ybx" eventType="touchUpInside" id="h6V-8M-FWv"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <action selector="finishPressed:" destination="sHS-FS-Ybx" id="EpE-ko-gbm"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

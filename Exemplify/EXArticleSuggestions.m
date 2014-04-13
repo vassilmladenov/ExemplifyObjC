@@ -97,9 +97,99 @@ NSMutableArray *discardedArticles;
 }
 
 - (IBAction)finishPressed:(id)sender
-{
-	
+{	
+	if ([keptArticles count] > 0){
+        NSMutableString *mailBody = [[NSMutableString alloc] init];
+        
+		NSMutableString *x = [[NSMutableString alloc] init];
+        for (EXArticle *a in keptArticles) {
+			[x appendString:[a citeArticle]];
+			[x appendString:@"\n\n"];
+		}
+        [mailBody appendString: @"Article List:<br><br>"];
+		
+		
+        if([x length] > 0)
+			[mailBody appendString: x];
+        
+        mailBody = (NSMutableString*)[mailBody stringByReplacingOccurrencesOfString:@"\n" withString:@"<br>"];
+        NSMutableString *emailTitle = [[NSMutableString alloc] initWithString:@"References about "];
+		[emailTitle appendString:[[NSUserDefaults standardUserDefaults] objectForKey:@"searchText"]];
+		
+        
+        NSString *messageBody = mailBody;
+        
+        
+        MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+        mc.mailComposeDelegate = self;
+        [mc setSubject:emailTitle];
+        [mc setMessageBody:messageBody isHTML:YES];
+        
+        // Present mail view controller on screen
+        [self presentViewController:mc animated:YES completion:NULL];
+	}
+	else
+	{
+		NSString *titleString = @"No Articles";
+		NSString *messageString = @"Please select at least one article.";
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:titleString
+														message:messageString
+													   delegate:nil
+											  cancelButtonTitle:@"OK"
+											  otherButtonTitles:nil, nil];
+		[alert show];
+	}
 }
+
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    UIAlertView *messageAlert;
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            messageAlert  = [[UIAlertView alloc]
+                             initWithTitle:@"Mail Cancelled" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            
+            break;
+        case MFMailComposeResultSaved:
+            messageAlert  = [[UIAlertView alloc]
+                             initWithTitle:@"Mail Saved" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            
+            break;
+        case MFMailComposeResultSent:
+            messageAlert  = [[UIAlertView alloc]
+                             initWithTitle:@"Mail Sent" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [articles removeAllObjects];
+			[keptArticles removeAllObjects];
+			[discardedArticles removeAllObjects];
+            [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"searchText"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            
+            break;
+        case MFMailComposeResultFailed:
+            messageAlert  = [[UIAlertView alloc]
+                             initWithTitle:@"Mail sent failure:" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            
+            break;
+        default:
+            break;
+    }
+    
+    
+    
+    // Close the Mail Interface
+    [self dismissViewControllerAnimated:YES completion:NULL];
+    [self performSelector:@selector(showMessage:) withObject:messageAlert afterDelay:0.4];
+    
+    
+}
+
+-(void)showMessage:(UIAlertView *)messageAlert
+{
+    [messageAlert show];
+}
+
+
 
 /*
 // Override to support conditional editing of the table view.

@@ -58,7 +58,6 @@
 			}
 		}
 	}
-	NSLog(@"Done");
 	[self makeArticlesWithTitles:titles withURLs:URLs];
 }
 
