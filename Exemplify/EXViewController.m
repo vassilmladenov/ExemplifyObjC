@@ -68,16 +68,6 @@ EXControl *control;
 	return YES;
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    
-    EXArticleSuggestions *tableView = segue.destinationViewController;
-    
-}
-
-
-
-
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
