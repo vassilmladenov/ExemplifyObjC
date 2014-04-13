@@ -162,6 +162,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="sHq-n8-ZJK" appends="YES" id="a2S-jY-n1i"/>
+                            <outletCollection property="gestureRecognizers" destination="r3v-M4-M1r" appends="YES" id="h4q-zJ-8Bt"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Article Select" id="FNb-KH-oIG">
                         <barButtonItem key="rightBarButtonItem" title="Finish" id="1lr-om-enc">
@@ -179,6 +184,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hou-DG-CG8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="sHq-n8-ZJK">
+                    <connections>
+                        <action selector="swipeRight:" destination="lvP-pW-1C5" id="Ept-Vx-Npv"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="r3v-M4-M1r">
+                    <connections>
+                        <action selector="swipeLeft:" destination="lvP-pW-1C5" id="EqS-3r-dhj"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="430" y="137"/>
         </scene>

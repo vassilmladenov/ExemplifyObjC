@@ -25,5 +25,8 @@
 - (IBAction)unmarkedButtonPressed:(id)sender;
 - (IBAction)keptButtonPressed:(id)sender;
 
+- (IBAction)swipeRight:(id)sender;
+- (IBAction)swipeLeft:(id)sender;
+
 @end
 
