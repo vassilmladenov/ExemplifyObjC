@@ -41,6 +41,10 @@ NSMutableArray *discardedArticles;
     discardedArticles = [[NSMutableArray alloc]init];
     
     self.unmarkedButton.selected = YES;
+    
+    UIBarButtonItem *customBarItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleBordered target:self action:@selector(dismissController)];
+    
+    self.navigationItem.leftBarButtonItem = customBarItem;
 }
 
 - (void)didReceiveMemoryWarning
