@@ -135,9 +135,6 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Sources" id="FNb-KH-oIG">
-                        <barButtonItem key="backBarButtonItem" title="Articles" id="HcU-pF-FpP">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Finish" id="1lr-om-enc">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -175,7 +172,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" id="DAr-7i-ZTx">
-                                <rect key="frame" x="0.0" y="65" width="320" height="459"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
@@ -184,14 +181,14 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="trash" id="5PW-xo-4dw">
-                                        <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </barButtonItem>
                                     <barButtonItem style="plain" id="fBe-W5-c2t">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Bf1-BK-N9C">
                                             <rect key="frame" x="45" y="6" width="60" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Discard">
-                                                <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
@@ -205,7 +202,7 @@
                                             <rect key="frame" x="216" y="6" width="60" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Keep">
-                                                <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
@@ -214,7 +211,7 @@
                                         </button>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="organize" id="baT-Yn-4ws">
-                                        <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </barButtonItem>
                                 </items>
                                 <color key="barTintColor" white="0.32828251009999998" alpha="1" colorSpace="calibratedWhite"/>
@@ -229,7 +226,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Sources" id="Nyo-vq-Wpa"/>
+                    <navigationItem key="navigationItem" title="Sources" id="Nyo-vq-Wpa">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="ymi-76-oAB">
+                            <button key="customView" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="9rM-nJ-k6l">
+                                <rect key="frame" x="282" y="11" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="webView" destination="DAr-7i-ZTx" id="gqi-pr-Ak8"/>
                     </connections>
