@@ -245,22 +245,4 @@ NSMutableArray *discardedArticles;
     [self.tableView reloadData];
 }
 
-- (IBAction)swipeRight:(id)sender {
-    if (whichArray <2){
-        whichArray = (whichArray + 1) % 3;
-
-		[self.tableView reloadData];
-		self.segmentButton.selectedSegmentIndex++;
-	}
-}
-
-- (IBAction)swipeLeft:(id)sender {
-    if (whichArray>0){
-        whichArray = (whichArray - 1) % 3;
-
-        [self.tableView reloadData];
-		self.segmentButton.selectedSegmentIndex--;
-    }
-}
-
 @end

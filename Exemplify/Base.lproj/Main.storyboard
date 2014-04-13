@@ -128,10 +128,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="sHq-n8-ZJK" appends="YES" id="a2S-jY-n1i"/>
-                            <outletCollection property="gestureRecognizers" destination="r3v-M4-M1r" appends="YES" id="h4q-zJ-8Bt"/>
-                        </connections>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Sources" id="FNb-KH-oIG">
@@ -150,16 +146,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hou-DG-CG8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="sHq-n8-ZJK">
-                    <connections>
-                        <action selector="swipeRight:" destination="lvP-pW-1C5" id="Ept-Vx-Npv"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="r3v-M4-M1r">
-                    <connections>
-                        <action selector="swipeLeft:" destination="lvP-pW-1C5" id="EqS-3r-dhj"/>
-                    </connections>
-                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="430" y="137"/>
         </scene>
@@ -225,10 +211,10 @@
                                 <rect key="frame" x="282" y="11" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                         </barButtonItem>
