@@ -43,7 +43,8 @@
 
 - (IBAction)discard:(id)sender {
     //move article from main array to discard array
-    [((EXArticleSuggestions *)self.navigationController.parentViewController).control discardArticle:self.article];
+    self.article.kept = NO;
+    self.article.processed = YES;
     
     //return to articles VC
     [self.navigationController popViewControllerAnimated:YES];
@@ -51,7 +52,8 @@
 
 - (IBAction)keep:(id)sender {
     //move article from main array to keep array
-    [((EXArticleSuggestions *)self.navigationController.parentViewController).control keepArticle:self.article];
+    self.article.kept = YES;
+    self.article.processed = YES;
     
     //return to articles VC
     [self.navigationController popViewControllerAnimated:YES];

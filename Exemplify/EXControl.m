@@ -65,6 +65,8 @@
 - (void)makeArticlesWithTitles:(NSMutableArray *)titles withURLs:(NSMutableArray *)URLs
 {
     self.articles = [[NSMutableArray alloc] init];
+    self.keptArticles = [[NSMutableArray alloc] init];
+    self.discardedArticles = [[NSMutableArray alloc] init];
     
 	// for every element, create an article with paired title and url
     for (int i = 0; i < [titles count]; i++){
@@ -79,22 +81,12 @@
 		[self.articles addObject:a];
         
     }
-
+    
 }
 
 - (NSMutableArray *)getArticles
 {
 	return self.articles;
-}
-
--(void)keepArticle:(EXArticle *)article{
-    [self.articles removeObject:article];
-    [self.keptArticles addObject:article];
-}
-
--(void)discardArticle:(EXArticle *)article{
-    [self.articles removeObject:article];
-    [self.discardedArticles addObject:article];
 }
 
 @end

@@ -16,6 +16,8 @@
 
 
 NSMutableArray *articles;
+NSMutableArray *keptArticles;
+NSMutableArray *discardedArticles;
 
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -32,6 +34,8 @@ NSMutableArray *articles;
     [super viewDidLoad];
 
     articles = [self.control getArticles];
+    keptArticles = [[NSMutableArray alloc]init];
+    discardedArticles = [[NSMutableArray alloc]init];
 }
 
 - (void)didReceiveMemoryWarning
@@ -74,6 +78,21 @@ NSMutableArray *articles;
 }
 
 -(void) viewDidAppear:(BOOL)animated{
+    for (int i = 0; i< [articles count]; i++)
+    {
+        EXArticle *a = articles[i];
+        if (a.processed){
+            if (a.kept){
+                [articles removeObject:a];
+                [keptArticles addObject:a];
+            }
+            else{
+                [articles removeObject:a];
+                [discardedArticles addObject:a];
+            }
+        }
+    }
+    
     [self.tableView reloadData];
 }
 

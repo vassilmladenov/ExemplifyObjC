@@ -10,7 +10,9 @@
 #import "EXArticle.h"
 #import "EXArticleSuggestions.h"
 
+
 @interface EXArticleVC : UIViewController
+
 @property EXArticle *article;
 
 - (IBAction)discard:(id)sender;

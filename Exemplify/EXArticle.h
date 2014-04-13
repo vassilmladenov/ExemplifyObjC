@@ -14,7 +14,8 @@
 @property (strong, nonatomic) NSString *body;
 @property (strong, nonatomic) NSURL *URL;
 
-@property (nonatomic) BOOL citing;
+@property (nonatomic) BOOL kept;
+@property (nonatomic) BOOL processed;
 
 /**
  * Builds out EXArticle object:
