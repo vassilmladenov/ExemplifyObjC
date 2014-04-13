@@ -157,7 +157,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" id="DAr-7i-ZTx">
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" id="DAr-7i-ZTx">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
