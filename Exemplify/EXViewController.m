@@ -39,7 +39,8 @@ EXControl *control;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    self.navigationController.navigationBar.hidden = YES;;
+    self.navigationController.navigationBar.hidden = YES;
+    self.searchField.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"searchText"];
 }
 -(void) viewDidAppear:(BOOL)animated
 {

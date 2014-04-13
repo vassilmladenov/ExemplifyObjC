@@ -37,11 +37,13 @@
 
 - (NSString *)citeArticle
 {
-	NSString *citation;
+	NSMutableString *citation= [[NSMutableString alloc]init];
 
 	// send article URL to easybib
-	citation = @"MAGICAL";
-	// set MLA formatted citation  
+    [citation appendString:self.title];
+    [citation appendString:@"\n" ];
+    [citation appendString:@"http://www.easybib.com/cite/eval?url=" ];
+    [citation appendString:[self.URL absoluteString]];
 
 	return citation;
 }

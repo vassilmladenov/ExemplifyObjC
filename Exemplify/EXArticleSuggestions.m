@@ -132,7 +132,7 @@ NSMutableArray *discardedArticles;
 			[x appendString:[a citeArticle]];
 			[x appendString:@"\n\n"];
 		}
-        [mailBody appendString: @"Article List:<br><br>"];
+        [mailBody appendString: @"Sources Titles and Links to Citations:<br><br>"];
 		
 		
         if([x length] > 0)
