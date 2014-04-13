@@ -142,7 +142,7 @@ NSMutableArray *discardedArticles;
         if([x length] > 0)
 			[mailBody appendString: x];
 		
-		[mailBody appendString:@"Sources compiled using Exemplify"];
+		[mailBody appendString:@"Sources compiled with Exemplify"];
         
         mailBody = (NSMutableString*)[mailBody stringByReplacingOccurrencesOfString:@"\n" withString:@"<br>"];
         NSMutableString *emailTitle = [[NSMutableString alloc] initWithString:@"References about "];
