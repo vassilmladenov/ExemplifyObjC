@@ -345,4 +345,6 @@ NSMutableArray *discardedArticles;
 		self.segmentButton.selectedSegmentIndex--;
     }
 }
+
+
 @end
