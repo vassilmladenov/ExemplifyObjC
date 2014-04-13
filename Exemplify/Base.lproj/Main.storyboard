@@ -19,7 +19,7 @@
             </objects>
             <point key="canvasLocation" x="-464" y="-4"/>
         </scene>
-        <!--View Controller - Search-->
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="EXViewController" sceneMemberID="viewController">
@@ -30,8 +30,8 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Topic..." minimumFontSize="17" id="Ep8-VC-0hb">
                                 <rect key="frame" x="20" y="269" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                 <connections>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="WWT-7m-zpH"/>
                                 </connections>
@@ -46,7 +46,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Search" id="ZNz-NH-r39"/>
+                    <navigationItem key="navigationItem" id="ZNz-NH-r39">
+                        <barButtonItem key="backBarButtonItem" title="Search" id="I6C-Q1-wXM"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchField" destination="Ep8-VC-0hb" id="tNb-yQ-7Ib"/>
                         <segue destination="lvP-pW-1C5" kind="push" identifier="DisplayArticleSuggestions" id="7JZ-L3-zvj"/>
@@ -59,7 +61,7 @@
         <!--Article Suggestions - Article Select-->
         <scene sceneID="p22-AX-pWR">
             <objects>
-                <viewController id="lvP-pW-1C5" customClass="EXArticleSuggestions" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="articleSuggestions" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lvP-pW-1C5" customClass="EXArticleSuggestions" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ciX-gm-zdv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
