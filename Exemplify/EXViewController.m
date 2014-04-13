@@ -21,12 +21,21 @@ EXControl *control;
 - (void)viewDidLoad
 {
     self.searchField.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"searchText"];
+
     [super viewDidLoad];
+    
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     
     if (!child)
         child = [self.storyboard instantiateViewControllerWithIdentifier:@"articleSuggestions"];
 
 	// Do any additional setup after loading the view, typically from a nib.
+    [self setNeedsStatusBarAppearanceUpdate];
+}
+
+- (UIStatusBarStyle) preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -49,6 +58,8 @@ EXControl *control;
     
     if (searchText != [[NSUserDefaults standardUserDefaults] objectForKey:@"searchText"]){
         child = [self.storyboard instantiateViewControllerWithIdentifier:@"articleSuggestions"];
+        child.segmentButton.selectedSegmentIndex = 1;
+        child.unmarkedButton.selected = YES;
         
         [[NSUserDefaults standardUserDefaults] setObject:searchText forKey:@"searchText"];
         [[NSUserDefaults standardUserDefaults] synchronize];
@@ -67,16 +78,6 @@ EXControl *control;
     });
 	return YES;
 }
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    
-    EXArticleSuggestions *tableView = segue.destinationViewController;
-    
-}
-
-
-
-
 
 - (void)didReceiveMemoryWarning
 {
