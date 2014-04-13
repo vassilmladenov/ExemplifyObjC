@@ -136,11 +136,13 @@ NSMutableArray *discardedArticles;
 			[x appendString:[a citeArticle]];
 			[x appendString:@"\n\n"];
 		}
-        [mailBody appendString: @"Source Titles and Links to Citations:<br><br>"];
+        [mailBody appendString: @"Article titles and links to citations:<br><br>"];
 		
 		
         if([x length] > 0)
 			[mailBody appendString: x];
+		
+		[mailBody appendString:@"Sources compiled using Exemplify"];
         
         mailBody = (NSMutableString*)[mailBody stringByReplacingOccurrencesOfString:@"\n" withString:@"<br>"];
         NSMutableString *emailTitle = [[NSMutableString alloc] initWithString:@"References about "];
