@@ -41,8 +41,10 @@
 
 	// send article URL to easybib
     [citation appendString:self.title];
+	[citation appendString:@"\n" ];
+    [citation appendString:[self.URL absoluteString]];
     [citation appendString:@"\n" ];
-    [citation appendString:@"http://www.easybib.com/cite/eval?url=" ];
+    [citation appendString:@"Citation: http://www.easybib.com/cite/eval?url=" ];
     [citation appendString:[self.URL absoluteString]];
 
 	return citation;
