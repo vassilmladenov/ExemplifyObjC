@@ -129,7 +129,6 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Sources" id="FNb-KH-oIG">
-                        <barButtonItem key="backBarButtonItem" id="VDb-xg-0eG"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="1lr-om-enc">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>

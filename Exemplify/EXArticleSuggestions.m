@@ -42,9 +42,9 @@ NSMutableArray *discardedArticles;
     
     self.unmarkedButton.selected = YES;
     
-    UIBarButtonItem *customBarItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleBordered target:self action:@selector(dismissController)];
-    
-    self.navigationItem.leftBarButtonItem = customBarItem;
+    [[UIBarButtonItem appearance]
+     setBackButtonTitlePositionAdjustment:UIOffsetMake(-1000, -1000)
+     forBarMetrics:UIBarMetricsDefault];
 }
 
 - (void)didReceiveMemoryWarning
