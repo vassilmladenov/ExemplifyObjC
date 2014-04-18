@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>53EB8A2F-D821-4D52-8E78-F376069786BA</string>
+	<string>8992F75B-7ED2-430A-9F6A-E5CC08964408</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Exemplify</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>B428BB60-CCB3-4830-9E0F-4A9808E52810</key>
-		<string>https://bitbucket.org/Vassi1995/exemplify.git</string>
+		<key>294B05AD-109A-4806-A224-D75F8D910B21</key>
+		<string>https://bitbucket.org/confluencehq/exemplify.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Exemplify.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>B428BB60-CCB3-4830-9E0F-4A9808E52810</key>
+		<key>294B05AD-109A-4806-A224-D75F8D910B21</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://bitbucket.org/Vassi1995/exemplify.git</string>
+	<string>https://bitbucket.org/confluencehq/exemplify.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>B428BB60-CCB3-4830-9E0F-4A9808E52810</string>
+	<string>294B05AD-109A-4806-A224-D75F8D910B21</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>B428BB60-CCB3-4830-9E0F-4A9808E52810</string>
+			<string>294B05AD-109A-4806-A224-D75F8D910B21</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Exemplify</string>
 		</dict>
